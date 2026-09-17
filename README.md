@@ -2,7 +2,7 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: repository scaffold.** Data collection, analysis and optimisation are planned; no empirical findings or model results are claimed yet.
+**Status: first price comparison completed.** Uploaded 2024 DE-LU and French price exports have been validated and aligned. See [results and methodology](reports/price_comparison_2024.md). Fundamental-driver analysis and battery optimisation remain planned.
 
 ## Questions
 
@@ -23,7 +23,7 @@ A Python portfolio project connecting electricity market fundamentals with batte
 
 | Path | Purpose |
 | --- | --- |
-| `notebooks/` | Three analysis notebooks, initially outlines |
+| `notebooks/` | Price comparison notebook and two subsequent analysis outlines |
 | `src/market_flex/` | Reusable Python functions as implementation progresses |
 | `data/README.md` | Data schema and provenance requirements |
 | `reports/` | Evidence-based market notes and exported figures |
@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-Dependencies are a starting list, not a tested or locked environment. The notebooks contain outlines only and do not require data yet.
+Dependencies are a starting list, not a tested or locked environment. Notebook 01 requires the two source CSV exports in `data/raw/`; notebooks 02 and 03 remain outlines. Run `python scripts/analyse_prices.py` to reproduce the price summary and chart.
 
 ## Analytical conventions
 
@@ -58,7 +58,7 @@ Dependencies are a starting list, not a tested or locked environment. The notebo
 
 ## Data and reproducibility
 
-Candidate sources to assess include ENTSO-E Transparency Platform, SMARD and RTE. No data has been downloaded. Verify coverage, access conditions, licences and redistribution rights before adding datasets. Record retrieval dates, units, missing intervals and aggregation rules. Never commit API keys or confidential thesis/employer material.
+Candidate sources to assess include ENTSO-E Transparency Platform, SMARD and RTE. The first comparison uses two user-supplied ENTSO-E GUI price exports; provenance and fingerprints are in the result report. Verify coverage, access conditions, licences and redistribution rights before adding datasets. Record retrieval dates, units, missing intervals and aggregation rules. Never commit API keys or confidential thesis/employer material.
 
 ## First milestone
 

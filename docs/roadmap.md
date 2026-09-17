@@ -2,7 +2,8 @@
 
 - [x] Initialise repository and scope.
 - [ ] Select sources and one common historical analysis period; document provenance and access terms.
-- [ ] Validate DE-LU/FR day-ahead prices; export a comparison chart.
+- [x] Validate selected 2024 DE-LU/FR price series; export a comparison chart.
+- [ ] Confirm DE-LU sequence auction metadata; annual-mean cross-check documented.
 - [ ] Add demand, wind, solar and residual load with explicit time alignment.
 - [ ] Rank high-price intervals; count negative-price duration using interval lengths.
 - [ ] Write three case studies separating observations, hypotheses and supporting evidence.
