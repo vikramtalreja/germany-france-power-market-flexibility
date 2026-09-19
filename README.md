@@ -2,7 +2,7 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: first price comparison completed.** Uploaded 2024 DE-LU and French price exports have been validated and aligned. See [results and methodology](reports/price_comparison_2024.md). Fundamental-driver analysis and battery optimisation remain planned.
+**Status: prices and actual fundamentals analysed for 2024.** See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. Battery optimisation remains planned.
 
 ## Questions
 
@@ -44,7 +44,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-Dependencies are a starting list, not a tested or locked environment. Notebook 01 requires the two source CSV exports in `data/raw/`; notebooks 02 and 03 remain outlines. Run `python scripts/analyse_prices.py` to reproduce the price summary and chart.
+Dependencies are a starting list, not a tested or locked environment. Notebook 01 requires the five source CSV exports listed in `scripts/analyse_fundamentals.py` in `data/raw/`; notebooks 02 and 03 remain outlines. Run `python scripts/analyse_prices.py` to reproduce the price summary and chart.
 
 ## Analytical conventions
 
@@ -67,3 +67,15 @@ Obtain a documented, common historical period of DE-LU and French day-ahead pric
 ## Background
 
 This independent portfolio project builds on my MSc thesis experience at Fraunhofer ISE in EV/PV/BESS optimisation under uncertainty. It does not include Fraunhofer source code or data and does not imply institutional endorsement.
+
+## Run the fundamentals analysis
+
+```bash
+python scripts/analyse_fundamentals.py
+# Optional: specify a directory containing the five original exports
+python scripts/analyse_fundamentals.py /path/to/exports
+# Focused data-handling tests (macOS/Linux)
+PYTHONPATH=src python -m unittest discover -s tests
+```
+
+The script writes the UTC hourly dataset into git-ignored `data/processed/` and aggregate tables, selected event records, validation notes and a chart into `reports/`. Missing actual observations are not imputed.

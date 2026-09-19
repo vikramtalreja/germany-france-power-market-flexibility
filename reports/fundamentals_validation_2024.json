@@ -1,0 +1,25 @@
+{
+  "smard_residual_max_difference_mw": 7.275957614183426e-12,
+  "french_duplicate_actual_rows_removed": 2,
+  "french_missing_half_hours_utc": [
+    "2024-10-27 00:00:00+00:00",
+    "2024-10-27 00:30:00+00:00"
+  ],
+  "input_sha256": {
+    "GUI_ENERGY_PRICES_202312312300-202412312300 (1).csv": "f90eb81e630de27176aca9c3ad02046026d65c9ab94d9d855774de0675d018fd",
+    "GUI_ENERGY_PRICES_202312312300-202412312300.csv": "4fdf6e02330284354f7c594169180229f447e5f575b942cca40f877f504afde7",
+    "Actual_generation_202312292300_202501022300_Quarterhour.csv": "958e2896ea1b2a585574ac17420cfa7cd6d1dab9ca0b95a398859798a0db9ad4",
+    "Actual_consumption_202312292300_202501022300_Quarterhour.csv": "8141135a1f72bf70ae02497a6e650901af350b98373e4dcc90fe54e001810dac",
+    "eco2mix-national-cons-def.csv": "b74d8cf44820e5c2c2779819454417b711b3f89b6e72f75e715486b648ff7cde"
+  },
+  "DE-LU": {
+    "complete_hours": 8784,
+    "missing_hours": 0,
+    "missing_nuclear_hours": 8076
+  },
+  "FR": {
+    "complete_hours": 8783,
+    "missing_hours": 1,
+    "missing_nuclear_hours": 1
+  }
+}

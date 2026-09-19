@@ -4,7 +4,8 @@
 - [ ] Select sources and one common historical analysis period; document provenance and access terms.
 - [x] Validate selected 2024 DE-LU/FR price series; export a comparison chart.
 - [ ] Confirm DE-LU sequence auction metadata; annual-mean cross-check documented.
-- [ ] Add demand, wind, solar and residual load with explicit time alignment.
+- [x] Add demand, wind, solar and residual load with explicit time alignment; document one missing French hour.
+- [ ] Recover the missing French autumn hour from an independently verified source.
 - [ ] Rank high-price intervals; count negative-price duration using interval lengths.
 - [ ] Write three case studies separating observations, hypotheses and supporting evidence.
 - [ ] Implement a Pyomo battery dispatch model with terminal SOC and no simultaneous charge/discharge.
