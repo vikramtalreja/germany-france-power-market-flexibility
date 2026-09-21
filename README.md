@@ -4,6 +4,10 @@ A Python portfolio project connecting electricity market fundamentals with batte
 
 **Status: prices and actual fundamentals analysed for 2024.** See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. Battery optimisation remains planned.
 
+## Project direction
+
+See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/project-direction.md) for the combined Andreas/Michael/thesis rationale, MVP sequence, forecast-versus-settlement rules, evaluation metrics and future CV wording. Forecasting and battery experiments are planned; completed results are linked above.
+
 ## Questions
 
 - How do day-ahead prices differ between Germany and France?
