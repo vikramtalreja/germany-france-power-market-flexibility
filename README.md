@@ -2,7 +2,7 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: prices and actual fundamentals analysed for 2024.** See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. Battery optimisation remains planned.
+**Status: 2024 prices, actual fundamentals and December case study completed.** See the [December price-spike case study](reports/december_case_2024.md). See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. Battery optimisation remains planned.
 
 ## Project direction
 
@@ -48,7 +48,7 @@ python -m pip install -r requirements.txt
 jupyter lab
 ```
 
-Dependencies are a starting list, not a tested or locked environment. Notebook 01 requires the five source CSV exports listed in `scripts/analyse_fundamentals.py` in `data/raw/`; notebooks 02 and 03 remain outlines. Run `python scripts/analyse_prices.py` to reproduce the price summary and chart.
+Dependencies are a starting list, not a tested or locked environment. Notebook 01 requires the five source CSV exports listed in `scripts/analyse_fundamentals.py` in `data/raw/`; notebook 02 reproduces the December case study; notebook 03 remains an outline. Run `python scripts/analyse_prices.py` to reproduce the price summary and chart.
 
 ## Analytical conventions
 
@@ -83,3 +83,7 @@ PYTHONPATH=src python -m unittest discover -s tests
 ```
 
 The script writes the UTC hourly dataset into git-ignored `data/processed/` and aggregate tables, selected event records, validation notes and a chart into `reports/`. Missing actual observations are not imputed.
+
+## Reproduce the December case study
+
+After creating the processed fundamentals dataset, run `python scripts/analyse_december.py` or open `notebooks/02_high_price_cases.ipynb`. This produces the event chart, December top-20 hours per zone, hourly/daily spreads and the analyst report. Results are retrospective; causal attribution and battery optimisation remain future work.

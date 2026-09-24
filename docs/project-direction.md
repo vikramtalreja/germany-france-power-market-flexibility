@@ -2,7 +2,7 @@
 
 Project direction recorded on 21 September 2026.
 
-**Status:** this document is a reference brief, not a claim that the experiments below are complete. The 2024 price and actual-fundamentals analysis is implemented; the December case study, battery optimiser and forecasting experiments are next.
+**Status:** this document is a reference brief, not a claim that the experiments below are complete. The 2024 price and actual-fundamentals analysis is implemented; the December case study is now completed; the battery optimiser and forecasting experiments are next.
 
 ## Central question and project story
 
@@ -142,13 +142,15 @@ The original brief proposed creating the repository, README and price pipeline f
 - [x] Repository and README created.
 - [x] Germany and France 2024 price data loaded and compared.
 - [x] Actual demand, wind, solar and residual load aligned with prices.
-- [ ] Plot December day-ahead prices and fundamentals.
-- [ ] Produce a clearly scoped top-20 high-price-hour table.
-- [ ] Produce hourly and daily DE-LU minus France spread outputs for the case study.
-- [ ] Write the event explanation and unresolved evidence questions.
+- [x] Plot December day-ahead prices and fundamentals.
+- [x] Produce a clearly scoped top-20 high-price-hour table.
+- [x] Produce hourly and daily DE-LU minus France spread outputs for the case study.
+- [x] Write the event explanation and unresolved evidence questions.
 - [ ] Build the perfect-foresight battery benchmark.
 - [ ] Add simple forecasts, then ML and financial evaluation.
 
 See [fundamentals results](../reports/fundamentals_2024.md) for current limitations, including one missing French actuals hour, national-versus-bidding-zone coverage and pending German price-sequence metadata confirmation.
 
 First establish the market story, then add the battery, then forecasting. Keep ancillary services, reBAP imbalance-cost analysis, SQL/reporting and educational FBMC modelling as later extensions rather than prerequisites for this MVP.
+
+December milestone: [completed report and reproducible outputs](../reports/december_case_2024.md).

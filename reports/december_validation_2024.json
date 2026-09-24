@@ -1,0 +1,9 @@
+{
+  "input_sha256": "f7b150964be50889883bdf22300959c2c980554bdb504f1fb0e802e8947072b6",
+  "december_hours_per_zone": 744,
+  "plot_hours_per_zone": 120,
+  "top_hours_per_zone": 20,
+  "event_utc": "2024-12-12 16:00:00+00:00",
+  "event_cet": "2024-12-12 17:00:00+01:00",
+  "checks": "unique continuous hourly coverage; complete core columns; residual-load identity"
+}
