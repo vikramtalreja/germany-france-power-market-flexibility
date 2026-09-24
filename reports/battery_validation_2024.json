@@ -1,0 +1,18 @@
+{
+  "battery": {
+    "power_mw": 1.0,
+    "energy_mwh": 2.0,
+    "round_trip_efficiency": 0.9,
+    "initial_fraction": 0.5,
+    "degradation_eur_per_mwh_discharged": 10.0
+  },
+  "main_solves": 732,
+  "sensitivity_solves": 186,
+  "hours_per_zone": 8784,
+  "input_sha256": "f7b150964be50889883bdf22300959c2c980554bdb504f1fb0e802e8947072b6",
+  "python": "3.12.14",
+  "pyomo": "6.10.1",
+  "highs": "1.15.1",
+  "mip_rel_gap": 1e-08,
+  "all_dispatch_checks_passed": true
+}
