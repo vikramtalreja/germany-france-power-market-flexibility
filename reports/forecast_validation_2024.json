@@ -1,0 +1,21 @@
+{
+  "battery": {
+    "power_mw": 1.0,
+    "energy_mwh": 2.0,
+    "round_trip_efficiency": 0.9,
+    "initial_fraction": 0.5,
+    "degradation_eur_per_mwh_discharged": 10.0
+  },
+  "evaluation_local_start": "2024-01-09",
+  "evaluation_local_end_inclusive": "2024-12-31",
+  "days_per_zone": 358,
+  "hours_per_zone": 8592,
+  "solves": 2148,
+  "spike_threshold_eur_mwh": 200,
+  "decision_cutoff": "D-1 09:00 Europe/Berlin",
+  "historical_delivery_days": "D-8 through D-2",
+  "input_sha256": "f7b150964be50889883bdf22300959c2c980554bdb504f1fb0e802e8947072b6",
+  "dispatch_unchanged_at_settlement": true,
+  "oracle_dominance_passed": true,
+  "max_source_end_utc": "2024-12-29 23:00:00+00:00"
+}

@@ -22,10 +22,30 @@ Validation: analytical arbitrage, flat positive prices, negative prices, both DS
 
 See [benchmark report](../reports/battery_benchmark_2024.md) for the formulation, results, run metadata and limitations.
 
-## 4. Next: simple forecast, fixed schedule, actual settlement — planned
+## 4. Simple forecast, fixed schedule, actual settlement — completed
 
 Define the forecast issuance time and permissible historical data first. Build a transparent same-hour baseline, choose the battery schedule using that forecast, then evaluate it against actual prices. Keep the oracle's physical constraints, daily SOC restoration and cycling cost.
 
 Compare MAE and event detection alongside net margin. Do not refit on the test period or use future actual fundamentals as inputs. Add ML only after the baseline passes information-timing checks.
 
 This extends the thesis's economic evaluation of uncertainty into a market-facing experiment and connects Andreas's market understanding advice with Michael's emphasis on financial outcomes.
+
+### Implementation and findings
+
+Implemented latest-same-hour and seven-day-same-hour forecasts using complete delivery days D-8 through D-2. The chosen decision cutoff is D-1 at 09:00 local time. This deliberately conservative history avoids reliance on newer auction publication times; historical export vintages are not independently verified. DST days retain their real 23/25-hour durations. Repeated historical hours are averaged within a day and missing same-hours use the documented fallback/available-day mean.
+
+The shared comparison starts on 9 January after the history window. We recompute the oracle on the same dates rather than comparing against full-year totals. Forecast prices choose quantities; actual prices settle them without re-optimisation. Realised losses remain in the sample. An oracle-dominance check verifies every daily comparison.
+
+The seven-day baseline has lower MAE and higher net margin in both zones in this sample. That is an empirical result, not proof that error and financial value always rank models the same way. The fixed EUR 200/MWh spike threshold and negative-price diagnostics provide an additional view; they are not trading rules.
+
+Validation includes future-data perturbation, constant forecasts, missing-history rejection, DST cutoff handling and an intentionally loss-making settlement example. Eleven tests pass. The Python workflow ran end-to-end; notebook syntax was checked, but no Jupyter kernel run is claimed.
+
+See [forecast baseline report](../reports/forecast_baselines_2024.md) for results, assumptions, metrics and reproducible outputs.
+
+## 5. Next: inspect failures, then define the ML evaluation — planned
+
+Review loss days and missed extreme events to understand the baseline limitations. Before tuning ML, specify a chronological training/validation/test split and available features. Compare every model and the oracle on the same held-out dates. Do not describe 2024 as an untouched test year after using it for these retrospective analyses.
+
+### Interpretation worth retaining
+
+The seven-day average has worse spike recall than the latest-same-hour baseline in both zones, despite lower MAE and higher net margin. This shows that these metrics capture different aspects of performance. It does not establish that missing spikes is beneficial or identify a causal reason for the margin difference. A targeted event/dispatch attribution is the next analytical step.

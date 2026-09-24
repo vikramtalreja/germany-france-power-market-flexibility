@@ -2,7 +2,7 @@
 
 Project direction recorded on 21 September 2026.
 
-**Status:** this document is a reference brief, not a claim that the experiments below are complete. The 2024 price and actual-fundamentals analysis is implemented; the December case study is now completed; the perfect-foresight battery benchmark is now completed; forecasting experiments are next.
+**Status:** this document is a reference brief, not a claim that the experiments below are complete. The 2024 price and actual-fundamentals analysis is implemented; the December case study is now completed; the perfect-foresight battery benchmark is now completed; historical forecast baselines are now completed; ML experiments remain planned.
 
 ## Central question and project story
 
@@ -147,7 +147,8 @@ The original brief proposed creating the repository, README and price pipeline f
 - [x] Produce hourly and daily DE-LU minus France spread outputs for the case study.
 - [x] Write the event explanation and unresolved evidence questions.
 - [x] Build the perfect-foresight battery benchmark.
-- [ ] Add simple forecasts, then ML and financial evaluation.
+- [x] Add simple forecasts and financial evaluation.
+- [ ] Add ML with a defined chronological validation/test protocol.
 
 See [fundamentals results](../reports/fundamentals_2024.md) for current limitations, including one missing French actuals hour, national-versus-bidding-zone coverage and pending German price-sequence metadata confirmation.
 
@@ -156,3 +157,5 @@ First establish the market story, then add the battery, then forecasting. Keep a
 December milestone: [completed report and reproducible outputs](../reports/december_case_2024.md).
 
 Battery milestone: [daily perfect-foresight results and assumptions](../reports/battery_benchmark_2024.md). Main case: 90% round-trip efficiency, EUR 10/MWh discharged cycling cost, daily initial/terminal SOC 50%. Next: a simple forecast with information-cutoff checks.
+
+Forecast baseline milestone: [accuracy and realised margin comparison](../reports/forecast_baselines_2024.md). Both baselines use only complete past delivery days, and settlement retains losses. Next: inspect failure cases and define ML evaluation dates.

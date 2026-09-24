@@ -2,7 +2,7 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: 2024 prices, actual fundamentals and December case study completed.** See the [December price-spike case study](reports/december_case_2024.md). See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. The [perfect-foresight battery benchmark](reports/battery_benchmark_2024.md) is now implemented; forecast-driven dispatch remains planned.
+**Status: 2024 prices, actual fundamentals and December case study completed.** See the [December price-spike case study](reports/december_case_2024.md). See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. The [perfect-foresight battery benchmark](reports/battery_benchmark_2024.md) is now implemented; historical forecast-driven dispatch is now implemented; ML remains planned.
 
 ## Project direction
 
@@ -91,3 +91,7 @@ After creating the processed fundamentals dataset, run `python scripts/analyse_d
 ## Battery benchmark: what and why
 
 Run `python scripts/analyse_battery.py` after the fundamentals pipeline. A Pyomo/HiGHS MILP optimises separate 1 MW / 2 MWh batteries for each 2024 delivery day. Perfect foresight establishes a daily oracle for later forecast comparisons; it is not demonstrated trading income. See [the formulation, assumptions, results and next step](reports/battery_benchmark_2024.md) and [development notes](docs/development-notes.md). Seven focused tests pass; the notebook wrapper is syntax-checked, while the complete workflow was executed as a Python script.
+
+## Forecast baselines: accuracy versus financial outcomes
+
+Run `python scripts/analyse_forecasts.py` to compare latest-same-hour and seven-day-mean price forecasts with the daily oracle on 9 January–31 December 2024. Forecasts choose fixed schedules; actual prices determine settlement, including losses. See [results and timing assumptions](reports/forecast_baselines_2024.md), `notebooks/04_forecast_baselines.ipynb`, and the ongoing [development notes](docs/development-notes.md). Eleven tests pass; notebook syntax is checked, with execution validated through the Python script.
