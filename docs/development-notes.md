@@ -49,3 +49,17 @@ Review loss days and missed extreme events to understand the baseline limitation
 ### Interpretation worth retaining
 
 The seven-day average has worse spike recall than the latest-same-hour baseline in both zones, despite lower MAE and higher net margin. This shows that these metrics capture different aspects of performance. It does not establish that missing spikes is beneficial or identify a causal reason for the margin difference. A targeted event/dispatch attribution is the next analytical step.
+
+## 6. Loss days and missed extremes — completed before ML
+
+We reconciled seven-day minus latest-same-hour margins using sales, purchases and cycling costs, then separated volume and transaction-price effects with an exact symmetric identity. This avoids assuming that smoothing or spike detection caused the improvement.
+
+Net advantage: EUR 8,705.44 in DE-LU and EUR 8,215.20 in France. The seven-day strategy traded more energy. It obtained a higher weighted sale price in both zones; its weighted purchase price was higher in Germany but lower in France. Most interval-level advantage was booked in EUR 0–200 hours, but these regime contributions are not standalone profits because SOC links charging and discharge across regimes.
+
+Despite missing 124 of 129 German spike classifications, the seven-day schedule discharged in 69 of those missed hours. In France it missed all 25 classifications but discharged in 14. Relative forecast prices can still produce useful actions without crossing the diagnostic threshold.
+
+Worst seven-day loss cases: Germany, 11 February (EUR -33.92), with unexpectedly expensive charging; France, 20 April (EUR -39.77), with unexpectedly weak sale prices. In each case realised gross margin was positive but insufficient to cover cycling costs. The report includes the largest adverse hourly settlement surprises and complete selected schedules.
+
+No forecasts were refitted. Accounting, paired-hour and decomposition checks passed. The notebook wrapper is syntax-checked; execution was validated through the script. See [failure analysis](../reports/forecast_failures_2024.md).
+
+Next: define a chronological ML evaluation protocol before fitting a model. Treat stable daily shape and uneconomic cycling as hypotheses to test elsewhere, not proof of a causal mechanism or grounds to delete losing days.

@@ -1,0 +1,11 @@
+zone,component,contribution_eur
+DE-LU,discharge_volume,11737.69813921271
+DE-LU,discharge_price_mix,7712.037403756947
+DE-LU,charge_volume,-6386.115652317311
+DE-LU,charge_price_mix,-3329.828209345467
+DE-LU,cycling_cost,-1028.3544693039476
+FR,discharge_volume,9700.152879577232
+FR,discharge_price_mix,2608.9768599408762
+FR,charge_volume,-5687.650916387537
+FR,charge_price_mix,2834.5052707845684
+FR,cycling_cost,-1240.7879407248638

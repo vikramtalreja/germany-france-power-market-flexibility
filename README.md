@@ -95,3 +95,7 @@ Run `python scripts/analyse_battery.py` after the fundamentals pipeline. A Pyomo
 ## Forecast baselines: accuracy versus financial outcomes
 
 Run `python scripts/analyse_forecasts.py` to compare latest-same-hour and seven-day-mean price forecasts with the daily oracle on 9 January–31 December 2024. Forecasts choose fixed schedules; actual prices determine settlement, including losses. See [results and timing assumptions](reports/forecast_baselines_2024.md), `notebooks/04_forecast_baselines.ipynb`, and the ongoing [development notes](docs/development-notes.md). Eleven tests pass; notebook syntax is checked, with execution validated through the Python script.
+
+## Diagnose forecast decisions before ML
+
+Run `python scripts/analyse_failures.py` after the forecast workflow. See [why the seven-day strategy earned more and where it failed](reports/forecast_failures_2024.md), including exact margin reconciliation, selected loss-day schedules and missed-extreme actions. The analysis diagnoses existing decisions without tuning forecasts or deleting losses. Notebook: `notebooks/05_forecast_failures.ipynb`.

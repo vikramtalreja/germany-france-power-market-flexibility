@@ -1,0 +1,8 @@
+{
+  "input_sha256": "b6f33d3d71dd26ee6cbb94f253056a02ddb4efcf26a4e825fabf0d55b584c259",
+  "paired_hours_per_zone": 8592,
+  "accounting_reconciled": true,
+  "volume_price_decomposition_reconciled": true,
+  "regime_contributions_reconciled": true,
+  "new_optimisations": 0
+}

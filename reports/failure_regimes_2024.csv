@@ -1,0 +1,7 @@
+zone,regime,hours,net_advantage_eur
+DE-LU,negative,446,161.3306233616584
+DE-LU,ordinary_0_to_200,8017,5978.545545080253
+DE-LU,spike_above_200,129,2565.5610435610256
+FR,negative,344,336.23252554307896
+FR,ordinary_0_to_200,8223,7692.751150441027
+FR,spike_above_200,25,186.21247720617734
