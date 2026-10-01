@@ -21,3 +21,5 @@ Report each fixed model's MAE, RMSE, net operating margin after degradation, ora
 
 ## Reproduction
 Run `python scripts/evaluate_2025.py`. Cached API inputs are reused. API rate-limit errors stop acquisition; respect Retry-After before retrying. Freeze this protocol and runner in GitHub before first execution.
+
+Implementation clarification before acquiring 2025: ignore spaces in unit labels (`EUR / MWh` equals `EUR/MWh`). This was identified on the 2024 source bridge; no value conversion or strategy change.

@@ -20,7 +20,7 @@ def acquire(zone,year,end):
         path.write_bytes(raw)
         meta.write_text(json.dumps({'url':url,'retrieved_utc':datetime.now(timezone.utc).isoformat(),'sha256':sha(path)},indent=2))
     record=json.loads(meta.read_text());assert record['sha256']==sha(path) and record['url']==url
-    body=json.loads(path.read_text());assert body['unit'] in ('EUR/MWh','€/MWh'),body['unit']
+    body=json.loads(path.read_text());assert body['unit'].replace(' ','') in ('EUR/MWh','€/MWh'),body['unit']
     idx=pd.to_datetime(body['unix_seconds'],unit='s',utc=True).rename('timestamp_utc')
     p=pd.Series(body['price'],index=idx,dtype=float)
     expected=pd.date_range(f'{year}-01-01',pd.Timestamp(end)+pd.Timedelta(days=1),freq='h',inclusive='left',tz='Europe/Berlin').tz_convert('UTC')
