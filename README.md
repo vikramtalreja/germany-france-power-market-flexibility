@@ -102,4 +102,8 @@ Run `python scripts/analyse_failures.py` after the forecast workflow. See [why t
 
 ## ML evaluation protocol — specified before training
 
-The [ML protocol](docs/ml-evaluation-protocol.md) and [configuration](config/ml-evaluation.json) fix chronological dates, available features, model candidates and financial selection rules. September–December 2024 is labelled retrospective because we already inspected that year. No ML performance is claimed yet.
+The [ML protocol](docs/ml-evaluation-protocol.md) and [configuration](config/ml-evaluation.json) fix chronological dates, available features, model candidates and financial selection rules. September–December 2024 is labelled retrospective because we already inspected that year. The protocol has now been executed; see [ML results](reports/ml_results_2024.md).
+
+## ML results — chronological retrospective comparison completed
+
+Run `python scripts/analyse_ml.py` to fit the declared Ridge and Random Forest candidates, select on July–August validation and evaluate on September–December. The seven-day baseline won validation margin in both zones and retained the highest evaluation margin among the tested forecast strategies. Random Forest improved MAE but reduced simulated margin relative to that baseline. See [results, assumptions and reproducibility](reports/ml_results_2024.md) and `notebooks/06_ml_evaluation.ipynb`. Fifteen tests pass; the full workflow ran as a script and notebook syntax was checked.

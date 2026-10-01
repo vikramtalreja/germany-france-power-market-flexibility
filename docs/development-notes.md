@@ -71,3 +71,17 @@ Initial training ends June 29; validation covers July 1–August 30. Final fitti
 We fixed a small Ridge/Random Forest search and calendar/historical-price features. Validation net battery margin selects the operational strategy; the MAE winner is tracked separately. Baselines may win. The already inspected 2024 window is retrospective; a proposed independent period still requires data verification.
 
 Why: avoid deciding what success means after seeing ML results. The earlier publication attempt failed during automatic approval review due to a usage limit; this entry records the completed protocol publication attempt on 1 October 2026. See [protocol](ml-evaluation-protocol.md). Next is implementation, not an already completed ML result.
+
+## 8. Ridge and Random Forest experiment — completed
+
+Implemented the frozen protocol with calendar and historical-price features, training-only numeric scaling for Ridge, and four settings per ML family. Model parameters remain frozen during evaluation; eligible lag features update daily. The JSON max_features value is explicitly interpreted as float 1.0 (all features), matching the protocol rather than sklearn's integer-one-feature setting.
+
+All validation candidates were scored and both zones' choices saved before evaluation began. The operational choice was the seven-day baseline in both zones. Family margin winners were Ridge alpha 0.1 and RF depth 6/leaf 5 in Germany, and Ridge alpha 10 and RF depth 6/leaf 20 in France. Validation MAE winners were additional deeper forests; their evaluation results are reported separately rather than used to change the selected strategy.
+
+On September–December, the seven-day baseline earned EUR 21,664.33 in DE-LU and EUR 12,857.58 in France. Margin-selected RF earned EUR 20,022.09 and EUR 11,150.65, respectively, despite lower MAE: 35.09 versus 39.88 EUR/MWh in Germany, and 27.26 versus 28.46 in France. Ridge margins were EUR 21,493.00 and EUR 12,547.64. These are partial-period simulated margins after cycling cost, not annual revenue or full business profit.
+
+Why this matters: we now have an observed example where lower forecast error produces worse financial decisions under identical battery constraints. The current result does not identify the specific forecast errors responsible, establish live profitability or prove that ML is generally inferior. It does justify keeping a strong baseline and evaluating decisions rather than MAE alone.
+
+Validation: 15 tests pass, covering leakage perturbation, training-only preprocessing, cutoff boundaries, DST, financial near-tie selection and existing battery/settlement checks. All daily schedules obey physical and oracle-dominance checks. The Python experiment ran end-to-end; notebook syntax was checked without a Jupyter kernel run. Versions, hashes, selected parameters and training rows are recorded in the run audit.
+
+See [ML report](../reports/ml_results_2024.md). Next freeze this result and assess robustness on verified uninspected data, or record a separately versioned experiment before adding features/refitting rules. Do not retune on September–December and relabel it a clean test.

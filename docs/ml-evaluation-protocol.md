@@ -90,3 +90,7 @@ Freeze the code and selection procedure before inspecting strategy performance t
 ## Next action
 
 Implement the feature builder and small candidate set, then execute this protocol. Update development notes with what was implemented, why, validation results and any deviation. No ML model has been fitted as part of this protocol step.
+
+## Execution record
+
+Version 1 was executed on 1 October 2026 after this protocol was committed. The original specification above is retained as the preregistered reference. See [the results](../reports/ml_results_2024.md) and [frozen selections](../reports/ml_selection_2024.json). The configuration's specified_not_trained status records the state when the protocol was defined; run completion is recorded in the result report and validation audit.

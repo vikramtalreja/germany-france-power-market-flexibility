@@ -1,0 +1,32 @@
+{
+  "DE-LU": {
+    "operational": "seven_day_same_hour",
+    "mae_winner": "rf_depth_12_leaf_20",
+    "family_winners": {
+      "ridge": "ridge_alpha_0.1",
+      "random_forest": "rf_depth_6_leaf_5"
+    },
+    "evaluation_models": [
+      "latest_same_hour",
+      "seven_day_same_hour",
+      "ridge_alpha_0.1",
+      "rf_depth_6_leaf_5",
+      "rf_depth_12_leaf_20"
+    ]
+  },
+  "FR": {
+    "operational": "seven_day_same_hour",
+    "mae_winner": "rf_depth_12_leaf_5",
+    "family_winners": {
+      "ridge": "ridge_alpha_10",
+      "random_forest": "rf_depth_6_leaf_20"
+    },
+    "evaluation_models": [
+      "latest_same_hour",
+      "seven_day_same_hour",
+      "ridge_alpha_10",
+      "rf_depth_6_leaf_20",
+      "rf_depth_12_leaf_5"
+    ]
+  }
+}

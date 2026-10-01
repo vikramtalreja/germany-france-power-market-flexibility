@@ -1,0 +1,23 @@
+zone,stage,model,rows,first_target,last_target
+DE-LU,initial_training,ridge_alpha_0.1,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,ridge_alpha_1,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,ridge_alpha_10,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,ridge_alpha_100,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,rf_depth_6_leaf_5,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,rf_depth_6_leaf_20,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,rf_depth_12_leaf_5,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,initial_training,rf_depth_12_leaf_20,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,ridge_alpha_0.1,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,ridge_alpha_1,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,ridge_alpha_10,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,ridge_alpha_100,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,rf_depth_6_leaf_5,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,rf_depth_6_leaf_20,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,rf_depth_12_leaf_5,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+FR,initial_training,rf_depth_12_leaf_20,4151,2024-01-08 23:00:00+00:00,2024-06-29 21:00:00+00:00
+DE-LU,final_training,ridge_alpha_0.1,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00
+DE-LU,final_training,rf_depth_6_leaf_5,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00
+DE-LU,final_training,rf_depth_12_leaf_20,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00
+FR,final_training,ridge_alpha_10,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00
+FR,final_training,rf_depth_6_leaf_20,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00
+FR,final_training,rf_depth_12_leaf_5,5639,2024-01-08 23:00:00+00:00,2024-08-30 21:00:00+00:00

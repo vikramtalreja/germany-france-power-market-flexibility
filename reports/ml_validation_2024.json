@@ -1,0 +1,100 @@
+{
+  "protocol_sha256": "f3ed3d6bcb9a371af087f2cb94b28b765218c14628a7c40ca0fe731f76578589",
+  "input_sha256": "f7b150964be50889883bdf22300959c2c980554bdb504f1fb0e802e8947072b6",
+  "selection_sha256_before_evaluation": "2b170b8eebb76b2fae3d48661048de848359fbd2e6e3501601d9b21bca0eb1e9",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0",
+    "pyomo": "6.10.1",
+    "highs": "1.15.1"
+  },
+  "candidate_parameters": {
+    "ridge_alpha_0.1": {
+      "family": "ridge",
+      "alpha": 0.1
+    },
+    "ridge_alpha_1": {
+      "family": "ridge",
+      "alpha": 1
+    },
+    "ridge_alpha_10": {
+      "family": "ridge",
+      "alpha": 10
+    },
+    "ridge_alpha_100": {
+      "family": "ridge",
+      "alpha": 100
+    },
+    "rf_depth_6_leaf_5": {
+      "family": "random_forest",
+      "n_estimators": 200,
+      "max_depth": 6,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "rf_depth_6_leaf_20": {
+      "family": "random_forest",
+      "n_estimators": 200,
+      "max_depth": 6,
+      "min_samples_leaf": 20,
+      "max_features": 1.0,
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "rf_depth_12_leaf_5": {
+      "family": "random_forest",
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "random_state": 42,
+      "n_jobs": 1
+    },
+    "rf_depth_12_leaf_20": {
+      "family": "random_forest",
+      "n_estimators": 200,
+      "max_depth": 12,
+      "min_samples_leaf": 20,
+      "max_features": 1.0,
+      "random_state": 42,
+      "n_jobs": 1
+    }
+  },
+  "numeric_features": [
+    "hour_sin",
+    "hour_cos",
+    "latest_same_hour",
+    "seven_day_same_hour_mean",
+    "seven_day_same_hour_std_ddof0",
+    "seven_day_same_hour_min",
+    "seven_day_same_hour_max",
+    "mean_of_seven_daily_mean_prices"
+  ],
+  "weekday_columns": [
+    "weekday_0",
+    "weekday_1",
+    "weekday_2",
+    "weekday_3",
+    "weekday_4",
+    "weekday_5",
+    "weekday_6"
+  ],
+  "checks": {
+    "source_hourly_coverage": true,
+    "training_boundaries": true,
+    "preprocessing_fit_training_only": true,
+    "oracle_dominance": true,
+    "settlement_unchanged": true,
+    "selections_unchanged_during_evaluation": true
+  },
+  "deviations": [],
+  "clarifications": [
+    "JSON max_features=1 is explicitly cast to float 1.0 to implement protocol all-feature semantics, not integer one-feature semantics."
+  ],
+  "previously_inspected_evaluation": true,
+  "total_scored_daily_schedules": 2684
+}
