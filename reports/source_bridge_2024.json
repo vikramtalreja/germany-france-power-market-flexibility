@@ -1,0 +1,38 @@
+{
+  "sources": [
+    {
+      "url": "https://api.energy-charts.info/price?bzn=DE-LU&start=2024-01-01&end=2024-12-31",
+      "retrieved_utc": "2026-10-01T16:40:04.236191+00:00",
+      "sha256": "50e26375364124d9e863beea8f459966806d7a5ac33e5282680c02cf7f92e863",
+      "zone": "DE-LU",
+      "year": 2024,
+      "hours": 8784,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    },
+    {
+      "url": "https://api.energy-charts.info/price?bzn=FR&start=2024-01-01&end=2024-12-31",
+      "retrieved_utc": "2026-10-01T16:40:34.998733+00:00",
+      "sha256": "455cd446ac1bc75b1d27bf625f8a70fc754cd11fb5ccd8eabfbf5f95dad9b29b",
+      "zone": "FR",
+      "year": 2024,
+      "hours": 8784,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    }
+  ],
+  "comparison": [
+    {
+      "zone": "DE-LU",
+      "hours": 8784,
+      "max_absolute_difference_eur_mwh": 0.0,
+      "matched_within_tolerance": true
+    },
+    {
+      "zone": "FR",
+      "hours": 8784,
+      "max_absolute_difference_eur_mwh": 0.0,
+      "matched_within_tolerance": true
+    }
+  ]
+}

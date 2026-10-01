@@ -1,0 +1,83 @@
+{
+  "sources": [
+    {
+      "url": "https://api.energy-charts.info/price?bzn=DE-LU&start=2024-01-01&end=2024-12-31",
+      "retrieved_utc": "2026-10-01T16:40:04.236191+00:00",
+      "sha256": "50e26375364124d9e863beea8f459966806d7a5ac33e5282680c02cf7f92e863",
+      "zone": "DE-LU",
+      "year": 2024,
+      "hours": 8784,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    },
+    {
+      "url": "https://api.energy-charts.info/price?bzn=FR&start=2024-01-01&end=2024-12-31",
+      "retrieved_utc": "2026-10-01T16:40:34.998733+00:00",
+      "sha256": "455cd446ac1bc75b1d27bf625f8a70fc754cd11fb5ccd8eabfbf5f95dad9b29b",
+      "zone": "FR",
+      "year": 2024,
+      "hours": 8784,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    },
+    {
+      "url": "https://api.energy-charts.info/price?bzn=DE-LU&start=2025-01-01&end=2025-09-30",
+      "retrieved_utc": "2026-10-01T16:41:41.683709+00:00",
+      "sha256": "10108c051c1014a57b015b27f1459dc848bcc6e2aee3012d32997442a382f0d6",
+      "zone": "DE-LU",
+      "year": 2025,
+      "hours": 6551,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    },
+    {
+      "url": "https://api.energy-charts.info/price?bzn=FR&start=2025-01-01&end=2025-09-30",
+      "retrieved_utc": "2026-10-01T16:42:46.868321+00:00",
+      "sha256": "b43384faf380036e66aa78904a736bf22dbbfd61c109ef3e55a46229f7f8d643",
+      "zone": "FR",
+      "year": 2025,
+      "hours": 6551,
+      "unit": "EUR / MWh",
+      "license_info": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+    }
+  ],
+  "bridge": [
+    {
+      "zone": "DE-LU",
+      "hours": 8784,
+      "max_absolute_difference_eur_mwh": 0.0,
+      "matched_within_tolerance": true
+    },
+    {
+      "zone": "FR",
+      "hours": 8784,
+      "max_absolute_difference_eur_mwh": 0.0,
+      "matched_within_tolerance": true
+    }
+  ],
+  "hashes": {
+    "docs/independent-2025-protocol.md": "0e6cf4f4355f58cea461a5143a334e28b45906b579085ed7a07c3bde295f4640",
+    "scripts/evaluate_2025.py": "717077ba9fc4b123bb29ca452e65e5906fe0057297800fa1a7cffd78b61dd12a",
+    "config/ml-evaluation.json": "f3ed3d6bcb9a371af087f2cb94b28b765218c14628a7c40ca0fe731f76578589",
+    "reports/ml_selection_2024.json": "2b170b8eebb76b2fae3d48661048de848359fbd2e6e3501601d9b21bca0eb1e9",
+    "src/market_flex/ml.py": "68f0b79383913dff1e01bf88d96684a81f01f2356319103d893907e264e911cd",
+    "src/market_flex/battery.py": "9a946933689283b43a666694cf17b71143b238d8504e7541f0cd1faa568b1d1e",
+    "src/market_flex/forecast.py": "cbbf69f9c8a4c6b0628d5016de0365000e79f8992aa7e92eb366427a5da50721",
+    "scripts/analyse_ml.py": "363fdd58d50fd7b408482ced131c31dcbfc325847269d4a1ed43383df8292591"
+  },
+  "training_input_sha256": "f7b150964be50889883bdf22300959c2c980554bdb504f1fb0e802e8947072b6",
+  "evaluation_start": "2025-01-09",
+  "evaluation_end": "2025-09-30",
+  "refit_on_2025": false,
+  "selection_changed": false,
+  "daily_schedules": 3180,
+  "gates": [
+    "exact hourly coverage",
+    "finite prices",
+    "2024 source bridge",
+    "fixed training input hash",
+    "forecast-time availability",
+    "unchanged settlement dispatch",
+    "oracle dominance"
+  ]
+}

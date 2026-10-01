@@ -2,11 +2,11 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: 2024 prices, actual fundamentals and December case study completed.** See the [December price-spike case study](reports/december_case_2024.md). See [fundamentals results and data-quality notes](reports/fundamentals_2024.md) and the [initial price comparison](reports/price_comparison_2024.md). France has one missing hour of actuals, retained as missing. The [perfect-foresight battery benchmark](reports/battery_benchmark_2024.md) is now implemented; historical forecast-driven dispatch is now implemented; ML remains planned.
+**Status: 2024 market analysis, BESS benchmarks and ML comparison completed; fixed-model 2025 robustness test completed.** See the [independent 2025 results](reports/independent_results_2025.md). Seven-day averaging retained the highest simulated margin among the tested forecast strategies in both markets, despite lower forecast error from some ML models. All results are simulated and subject to the documented market-execution limitations.
 
 ## Project direction
 
-See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/project-direction.md) for the combined Andreas/Michael/thesis rationale, MVP sequence, forecast-versus-settlement rules, evaluation metrics and future CV wording. Forecasting and battery experiments are planned; completed results are linked above.
+See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/project-direction.md) for the combined Andreas/Michael/thesis rationale, MVP sequence, forecast-versus-settlement rules, evaluation metrics and future CV wording. Forecasting, battery and fixed-model robustness experiments are now complete; results and limitations are linked below.
 
 ## Questions
 
@@ -107,3 +107,8 @@ The [ML protocol](docs/ml-evaluation-protocol.md) and [configuration](config/ml-
 ## ML results — chronological retrospective comparison completed
 
 Run `python scripts/analyse_ml.py` to fit the declared Ridge and Random Forest candidates, select on July–August validation and evaluate on September–December. The seven-day baseline won validation margin in both zones and retained the highest evaluation margin among the tested forecast strategies. Random Forest improved MAE but reduced simulated margin relative to that baseline. See [results, assumptions and reproducibility](reports/ml_results_2024.md) and `notebooks/06_ml_evaluation.ipynb`. Fifteen tests pass; the full workflow ran as a script and notebook syntax was checked.
+
+
+## Independent 2025 robustness test — completed
+
+The [test protocol](docs/independent-2025-protocol.md) and runner were frozen before 2025 prices were acquired. The new source exactly reproduced all 2024 project prices, then supplied a previously uninspected 9 January–30 September 2025 period. Existing candidates and January–August 2024 training stayed fixed. See the [report and chart](reports/independent_results_2025.md) for margins, forecast errors, losses, provenance and portfolio wording. Run `python scripts/evaluate_2025.py` followed by `python scripts/report_independent_2025.py`.

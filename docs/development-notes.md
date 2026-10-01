@@ -85,3 +85,20 @@ Why this matters: we now have an observed example where lower forecast error pro
 Validation: 15 tests pass, covering leakage perturbation, training-only preprocessing, cutoff boundaries, DST, financial near-tie selection and existing battery/settlement checks. All daily schedules obey physical and oracle-dominance checks. The Python experiment ran end-to-end; notebook syntax was checked without a Jupyter kernel run. Versions, hashes, selected parameters and training rows are recorded in the run audit.
 
 See [ML report](../reports/ml_results_2024.md). Next freeze this result and assess robustness on verified uninspected data, or record a separately versioned experiment before adding features/refitting rules. Do not retune on September–December and relabel it a clean test.
+
+
+## 9. Independent 2025 transfer test — completed
+
+**Why:** the 2024 evaluation year had already been inspected. We needed a previously uninspected period to see whether the accuracy-versus-financial-value finding survived without retuning.
+
+**What we froze:** January 9–September 30 2025 evaluation, original candidate list and operational seven-day baseline, original January 9–August 30 2024 training, existing information cutoff and battery assumptions. No 2025 fitting or strategy reselection. The protocol/runner were committed before acquisition; a unit-label whitespace correction was committed after the 2024 source check and before 2025 acquisition.
+
+**Data verification:** the Energy-Charts API attributes these DE-LU and FR prices to Bundesnetzagentur | SMARD.de under CC BY 4.0. Both series exactly matched all 8,784 original 2024 hourly prices. The 2025 data passed exact hourly coverage checks. Each evaluation contains 265 days and 6,359 hours, handling the spring clock change. This supports product comparability without claiming every original export metadata ambiguity has been recovered.
+
+**Findings:** seven-day averaging earned EUR55,361.95 in DE-LU and EUR33,633.12 in France. Previously margin-selected forests earned EUR52,715.33 and EUR29,313.43, while their MAE was lower (25.39 versus 27.31 in DE-LU; 25.60 versus 25.84 in France). Ridge earned EUR55,090.56 and EUR32,807.20. Seven-day averaging had one German loss day and two French loss days; French Ridge had only one loss day despite a lower total margin. Different objectives therefore give different rankings.
+
+**Interpretation:** the financial advantage persisted in this fixed-model holdout, but this does not prove baseline superiority in general. ML models were deliberately not refreshed: this is transfer robustness, not a comparison with a continually retrained production system. The simulated margin excludes market execution, imbalance exposure, fees and capital costs.
+
+**Evidence:** 15 existing tests pass. The new script completed 3,180 daily strategy schedules with unchanged-dispatch settlement, physical feasibility and oracle checks. Full metrics, daily/monthly results, paired comparisons, input/source fingerprints, and a chart are linked from the [2025 report](../reports/independent_results_2025.md).
+
+**Profile use:** now describe a frozen, timing-aware evaluation that connects forecast error to battery decisions and checks robustness in another year. Avoid claiming live trading performance. A useful next industry extension is continuous SOC and a declared execution/fee model, under a new protocol and a fresh test period rather than tuning against this holdout.
