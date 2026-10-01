@@ -63,3 +63,11 @@ Worst seven-day loss cases: Germany, 11 February (EUR -33.92), with unexpectedly
 No forecasts were refitted. Accounting, paired-hour and decomposition checks passed. The notebook wrapper is syntax-checked; execution was validated through the script. See [failure analysis](../reports/forecast_failures_2024.md).
 
 Next: define a chronological ML evaluation protocol before fitting a model. Treat stable daily shape and uneconomic cycling as hypotheses to test elsewhere, not proof of a causal mechanism or grounds to delete losing days.
+
+## 7. Chronological ML protocol — specified before training
+
+Initial training ends June 29; validation covers July 1–August 30. Final fitting uses targets through August 30; evaluation covers September–December with model parameters frozen and eligible historical features updated daily. These boundaries respect the D-2 policy at each initial cutoff.
+
+We fixed a small Ridge/Random Forest search and calendar/historical-price features. Validation net battery margin selects the operational strategy; the MAE winner is tracked separately. Baselines may win. The already inspected 2024 window is retrospective; a proposed independent period still requires data verification.
+
+Why: avoid deciding what success means after seeing ML results. The earlier publication attempt failed during automatic approval review due to a usage limit; this entry records the completed protocol publication attempt on 1 October 2026. See [protocol](ml-evaluation-protocol.md). Next is implementation, not an already completed ML result.

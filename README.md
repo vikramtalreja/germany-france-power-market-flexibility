@@ -99,3 +99,7 @@ Run `python scripts/analyse_forecasts.py` to compare latest-same-hour and seven-
 ## Diagnose forecast decisions before ML
 
 Run `python scripts/analyse_failures.py` after the forecast workflow. See [why the seven-day strategy earned more and where it failed](reports/forecast_failures_2024.md), including exact margin reconciliation, selected loss-day schedules and missed-extreme actions. The analysis diagnoses existing decisions without tuning forecasts or deleting losses. Notebook: `notebooks/05_forecast_failures.ipynb`.
+
+## ML evaluation protocol — specified before training
+
+The [ML protocol](docs/ml-evaluation-protocol.md) and [configuration](config/ml-evaluation.json) fix chronological dates, available features, model candidates and financial selection rules. September–December 2024 is labelled retrospective because we already inspected that year. No ML performance is claimed yet.

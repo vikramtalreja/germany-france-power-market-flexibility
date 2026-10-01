@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "status": "specified_not_trained",
+  "timezone": "Europe/Berlin",
+  "zones": [
+    "DE-LU",
+    "FR"
+  ],
+  "target": "hourly_day_ahead_price_eur_mwh",
+  "decision_cutoff": "D-1 09:00 local",
+  "history": "complete local delivery days D-8 through D-2",
+  "initial_training": {
+    "start": "2024-01-09",
+    "end": "2024-06-29"
+  },
+  "validation": {
+    "start": "2024-07-01",
+    "end": "2024-08-30",
+    "refit": false
+  },
+  "final_training": {
+    "start": "2024-01-09",
+    "end": "2024-08-30"
+  },
+  "evaluation": {
+    "start": "2024-09-01",
+    "end": "2024-12-31",
+    "refit": false,
+    "previously_inspected": true
+  },
+  "features": [
+    "hour_sin",
+    "hour_cos",
+    "weekday_one_hot",
+    "latest_same_hour",
+    "seven_day_same_hour_mean",
+    "seven_day_same_hour_std_ddof0",
+    "seven_day_same_hour_min",
+    "seven_day_same_hour_max",
+    "mean_of_seven_daily_mean_prices"
+  ],
+  "candidates": [
+    {
+      "model": "ridge",
+      "alpha": [
+        0.1,
+        1,
+        10,
+        100
+      ],
+      "scale_numeric": true
+    },
+    {
+      "model": "random_forest",
+      "n_estimators": 200,
+      "max_depth": [
+        6,
+        12
+      ],
+      "min_samples_leaf": [
+        5,
+        20
+      ],
+      "max_features": 1,
+      "random_state": 42,
+      "n_jobs": 1
+    }
+  ],
+  "selection": {
+    "primary": "validation_net_battery_margin",
+    "near_tie_eur": 1,
+    "secondary": "lowest_hourly_MAE",
+    "final_tie_order": [
+      "latest_same_hour",
+      "seven_day_same_hour",
+      "ridge_in_declared_order",
+      "random_forest_in_declared_order"
+    ],
+    "baselines_eligible": true
+  },
+  "battery": {
+    "power_mw": 1,
+    "energy_mwh": 2,
+    "round_trip_efficiency": 0.9,
+    "start_end_soc_fraction": 0.5,
+    "degradation_eur_per_mwh_discharged": 10
+  },
+  "spike_definition": "price > 200 EUR/MWh",
+  "negative_definition": "price < 0",
+  "independent_holdout": {
+    "status": "proposed_not_acquired_or_verified",
+    "start": "2025-01-09",
+    "end": "2025-09-30",
+    "condition": "freeze code and verify comparable products and resolution before inspecting performance"
+  }
+}
