@@ -1,0 +1,70 @@
+name: Recover dispatch and diagnose ML
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/recover-dispatch.yml'
+      - 'scripts/recover_dispatch_2025.py'
+      - 'scripts/publish_ml_diagnosis.py'
+permissions:
+  contents: write
+concurrency:
+  group: recover-dispatch
+  cancel-in-progress: false
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install recorded numerical dependencies
+        run: python -m pip install numpy==2.3.5 pandas==2.2.3 scikit-learn==1.8.0 pyomo==6.10.1 highspy==1.15.1 matplotlib
+      - name: Test existing model
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - name: Recover and reconcile original results
+        run: python scripts/recover_dispatch_2025.py
+      - name: Diagnose hourly schedules and build charts
+        run: python scripts/diagnose_ml_2025.py
+      - name: Write interpretation
+        run: python scripts/publish_ml_diagnosis.py
+      - name: Upload full downloadable CSV and diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: recovered-dispatch-and-diagnosis
+          retention-days: 90
+          path: |
+            data/processed/independent_dispatch_2025.csv
+            data/recovered/
+            reports/ml_diagnosis*
+            reports/dispatch_recovery_2025.json
+            reports/figures/ml_diagnosis*.svg
+      - name: Record run status
+        if: always()
+        env:
+          RECOVERY_OUTCOME: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path("reports/recovery-status.json").write_text(json.dumps({"status":os.environ["RECOVERY_OUTCOME"],"run_url":os.environ["RUN_URL"]},indent=2))
+          PY
+      - name: Save results to repository
+        if: always()
+        env:
+          RECOVERY_OUTCOME: ${{ job.status }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/recovery-status.json
+          if [ "$RECOVERY_OUTCOME" = "success" ]; then
+            git add -f data/recovered/
+            git add reports/ml_diagnosis* reports/dispatch_recovery_2025.json reports/figures/ml_diagnosis*.svg
+          fi
+          git diff --cached --quiet && exit 0
+          git commit -m "Save dispatch recovery status and validated diagnosis outputs"
+          git push origin HEAD:main

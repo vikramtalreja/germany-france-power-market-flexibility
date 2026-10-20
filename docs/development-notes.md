@@ -123,3 +123,11 @@ On 20 October 2026, read committed daily 2025 results and frozen forest selectio
 Why: establish accounting evidence before assigning a behavioural explanation. Reduced cycling cost does not cause the shortfall. Daily data cannot separate sales from purchases or identify intraday timing mistakes.
 
 The execution environment is unavailable and the original hourly dispatch CSV is git-ignored/not present in GitHub. Added a follow-through script that checks original hourly results against committed daily results, exports signed revenue/cost attribution and plots the 16 cases. That script has not been executed or runtime-tested. See [report](../reports/ml_diagnosis_2025.md). Continuous operation remains after completion of this hourly diagnosis.
+
+## 12. Remote recovery route — prepared
+
+Added a GitHub Actions job to reconstruct hourly dispatch without a local user installation. It downloads the four original public API responses, requires exact original response hashes, uses the frozen price-only training and model settings, and reconciles every daily financial total before publishing. It preserves the original experiment code and reports.
+
+The full reconstructed dispatch and price inputs are saved as compressed CSV files under data/recovered, with an additional downloadable workflow artifact. Selected-case schedules, signed sales/purchase/cycling attribution and 16 charts are saved under reports. A separate hourly report is written only after successful checks. The original hourly file had no retained fingerprint, so matching daily totals does not prove identical solver tie-breaking; hourly explanations refer to reconstructed schedules.
+
+Workflow success is not assumed by this entry: consult reports/recovery-status.json and the recovery audit. If a source hash, package installation or financial check fails, the job stops and does not publish unverified results.

@@ -121,3 +121,7 @@ The [test protocol](docs/independent-2025-protocol.md) and runner were frozen be
 ## ML diagnosis — daily accounting completed; hourly inspection pending
 
 See [the diagnosis report](reports/ml_diagnosis_2025.md) for the full-period gross/cycling reconciliation and five adverse/three favourable cases per market. RF cycled less overall; lower cycling costs partly offset lower gross trading margin. Separate sales/purchase attribution and hourly forecast/dispatch/SOC charts require the original hourly dispatch file and execution of `scripts/diagnose_ml_2025.py`. The script has not yet been run; this stage remains partially complete.
+
+## Recover hourly data without a local installation
+
+The **Recover dispatch and diagnose ML** GitHub Actions workflow reconstructs the frozen experiment, checks every daily financial result and saves permanent compressed CSV files under [data/recovered](data/recovered/README.md). It also provides an uncompressed CSV in a downloadable workflow artifact. Results and the hourly diagnosis appear only after a successful run; check the Actions tab and `reports/recovery-status.json`. No user upload is required.
