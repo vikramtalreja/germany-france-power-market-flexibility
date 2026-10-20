@@ -1,0 +1,3 @@
+zone,rf_model,net_difference_eur,gross_difference_eur,cycling_cost_difference_eur,discharge_difference_mwh,rf_wins,rf_losses
+DE-LU,rf_depth_6_leaf_5,-2646.619661742342,-2790.947797007303,-144.32813526495755,-14.4328135264957,103,154
+FR,rf_depth_6_leaf_20,-4319.68464335579,-6494.486097840953,-2174.8014544851617,-217.4801454485165,86,164

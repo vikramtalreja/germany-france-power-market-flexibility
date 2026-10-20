@@ -22,6 +22,8 @@ Implemented historical baselines, chronological Ridge/Random Forest evaluation a
 
 ### Immediate task: explain the ML margin gap
 
+Progress on 20 October 2026: [daily accounting and case selection completed](../reports/ml_diagnosis_2025.md). Hourly sales/purchase decomposition and forecast/dispatch/SOC plots remain pending access to the original hourly file and an execution environment. The follow-through script is committed but unexecuted.
+
 - Compare the previously selected Random Forest against seven-day averaging separately in each zone, using the existing 2025 test outputs.
 - Reconcile full-period and daily differences as sales revenue minus purchase expenditure minus cycling cost, with signed prices retained.
 - Inspect the five largest RF underperformance days and three largest outperformance days per zone; rank by paired net margin and break ties by date.

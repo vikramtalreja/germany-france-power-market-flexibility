@@ -115,3 +115,11 @@ The immediate deliverable is a retrospective RF-versus-seven-day diagnosis on ex
 Before implementing continuous operation, declare decision timing, horizon, forecast availability, initial/terminal treatment, costs and fair comparator. Before intraday/reserves, verify historical product rules, data timestamps and execution/activation assumptions. Existing inspected years remain retrospective for new experiments.
 
 This update changes documentation only. No forecast, optimisation model or result has been rerun. The execution environment is currently unavailable; GitHub remains accessible for maintaining the roadmap. Previously reported test results belong to their original experiment runs.
+
+## 11. ML diagnosis — daily stage completed, hourly stage blocked
+
+On 20 October 2026, read committed daily 2025 results and frozen forest selections. Reconciled 530 paired daily differences and strategy totals using JavaScript. RF-minus-baseline gross margin is EUR-2,790.95 in DE-LU and EUR-6,494.49 in France; cycling-cost savings of EUR144.33 and EUR2,174.80 reduce the net shortfalls to EUR2,646.62 and EUR4,319.68. Selected five largest underperformance and three largest outperformance days per zone, retaining positive-margin underperformance and genuine RF wins.
+
+Why: establish accounting evidence before assigning a behavioural explanation. Reduced cycling cost does not cause the shortfall. Daily data cannot separate sales from purchases or identify intraday timing mistakes.
+
+The execution environment is unavailable and the original hourly dispatch CSV is git-ignored/not present in GitHub. Added a follow-through script that checks original hourly results against committed daily results, exports signed revenue/cost attribution and plots the 16 cases. That script has not been executed or runtime-tested. See [report](../reports/ml_diagnosis_2025.md). Continuous operation remains after completion of this hourly diagnosis.

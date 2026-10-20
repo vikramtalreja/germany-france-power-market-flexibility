@@ -117,3 +117,7 @@ Run `python scripts/analyse_ml.py` to fit the declared Ridge and Random Forest c
 ## Independent 2025 robustness test — completed
 
 The [test protocol](docs/independent-2025-protocol.md) and runner were frozen before 2025 prices were acquired. The new source exactly reproduced all 2024 project prices, then supplied a previously uninspected 9 January–30 September 2025 period. Existing candidates and January–August 2024 training stayed fixed. See the [report and chart](reports/independent_results_2025.md) for margins, forecast errors, losses, provenance and portfolio wording. Run `python scripts/evaluate_2025.py` followed by `python scripts/report_independent_2025.py`.
+
+## ML diagnosis — daily accounting completed; hourly inspection pending
+
+See [the diagnosis report](reports/ml_diagnosis_2025.md) for the full-period gross/cycling reconciliation and five adverse/three favourable cases per market. RF cycled less overall; lower cycling costs partly offset lower gross trading margin. Separate sales/purchase attribution and hourly forecast/dispatch/SOC charts require the original hourly dispatch file and execution of `scripts/diagnose_ml_2025.py`. The script has not yet been run; this stage remains partially complete.
