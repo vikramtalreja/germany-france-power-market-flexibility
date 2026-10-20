@@ -102,3 +102,16 @@ See [ML report](../reports/ml_results_2024.md). Next freeze this result and asse
 **Evidence:** 15 existing tests pass. The new script completed 3,180 daily strategy schedules with unchanged-dispatch settlement, physical feasibility and oracle checks. Full metrics, daily/monthly results, paired comparisons, input/source fingerprints, and a chart are linked from the [2025 report](../reports/independent_results_2025.md).
 
 **Profile use:** now describe a frozen, timing-aware evaluation that connects forecast error to battery decisions and checks robustness in another year. Avoid claiming live trading performance. A useful next industry extension is continuous SOC and a declared execution/fee model, under a new protocol and a fresh test period rather than tuning against this holdout.
+
+
+## 10. Agreed progression to cross-market optimisation — 20 October 2026
+
+Adopted the sequence: daily day-ahead benchmark → forecast-driven dispatch and ML diagnosis → continuous operation → day-ahead plus intraday → energy plus reserves. The [roadmap](roadmap.md) now records actual completion status, prerequisites and acceptance criteria; it supersedes earlier forward-looking entries as the current plan.
+
+Why this order: first explain the existing forecast-to-margin finding. Then remove forced daily SOC restoration and track energy and trade commitments over time. Intraday trades must adjust an existing position while retaining its original cashflow. Reserve provision must share the same finite battery power and energy, so standalone revenues cannot simply be added.
+
+The immediate deliverable is a retrospective RF-versus-seven-day diagnosis on existing 2025 results: full accounting reconciliation plus the five largest underperformance and three largest outperformance days per zone. No diagnosis results or continuous-operation results are claimed in this update.
+
+Before implementing continuous operation, declare decision timing, horizon, forecast availability, initial/terminal treatment, costs and fair comparator. Before intraday/reserves, verify historical product rules, data timestamps and execution/activation assumptions. Existing inspected years remain retrospective for new experiments.
+
+This update changes documentation only. No forecast, optimisation model or result has been rerun. The execution environment is currently unavailable; GitHub remains accessible for maintaining the roadmap. Previously reported test results belong to their original experiment runs.

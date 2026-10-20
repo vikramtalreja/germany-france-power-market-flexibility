@@ -16,12 +16,17 @@ See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/p
 - How does battery dispatch value change with capacity, efficiency and cycling cost?
 - How can network constraints affect zonal prices in an educational flow-based example?
 
-## Planned workflow
+## Implementation sequence
 
-1. **Market fundamentals:** load and validate prices, demand, wind and solar; calculate residual load and DE–FR spreads.
-2. **High-price case studies:** investigate selected periods, documenting supporting evidence and alternative explanations.
-3. **BESS optimisation:** use Pyomo to model power, energy, efficiency, state of charge, terminal energy and mutually exclusive charging/discharging.
-4. **Network extension:** build a small illustrative PTDF/RAM constraint model. This will not reproduce operational European flow-based market coupling.
+| Version | Main question | Status |
+| --- | --- | --- |
+| Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed |
+| Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed; detailed ML diagnosis pending |
+| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation after diagnosis |
+| Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension |
+| Energy + reserves | How should scarce battery capability be allocated? | Following extension |
+
+Follow the [roadmap and completion criteria](docs/roadmap.md). The immediate task is to diagnose the Random Forest margin gap using existing results. Continuous SOC, commitment accounting and suitable market data precede cross-market strategies. Intraday, FCR and aFRR strategies are not yet implemented.
 
 ## Repository structure
 
@@ -64,9 +69,9 @@ Dependencies are a starting list, not a tested or locked environment. Notebook 0
 
 Candidate sources to assess include ENTSO-E Transparency Platform, SMARD and RTE. The first comparison uses two user-supplied ENTSO-E GUI price exports; provenance and fingerprints are in the result report. Verify coverage, access conditions, licences and redistribution rights before adding datasets. Record retrieval dates, units, missing intervals and aggregation rules. Never commit API keys or confidential thesis/employer material.
 
-## First milestone
+## Immediate milestone
 
-Obtain a documented, common historical period of DE-LU and French day-ahead prices, validate timestamps and units, and produce one comparison chart with a short market note. Add demand and generation after the price pipeline works.
+Explain the ML margin gap with full-period accounting and selected daily schedules, then specify continuous battery operation. See the [current roadmap](docs/roadmap.md); completed market and forecasting results remain linked below.
 
 ## Background
 
@@ -86,7 +91,7 @@ The script writes the UTC hourly dataset into git-ignored `data/processed/` and 
 
 ## Reproduce the December case study
 
-After creating the processed fundamentals dataset, run `python scripts/analyse_december.py` or open `notebooks/02_high_price_cases.ipynb`. This produces the event chart, December top-20 hours per zone, hourly/daily spreads and the analyst report. Results are retrospective; causal attribution and battery optimisation remain future work.
+After creating the processed fundamentals dataset, run `python scripts/analyse_december.py` or open `notebooks/02_high_price_cases.ipynb`. This produces the event chart, December top-20 hours per zone, hourly/daily spreads and the analyst report. Results are retrospective; causal attribution remains incomplete. Battery optimisation is implemented in the subsequent stages below.
 
 ## Battery benchmark: what and why
 
