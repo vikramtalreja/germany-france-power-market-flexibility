@@ -21,12 +21,12 @@ See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/p
 | Version | Main question | Status |
 | --- | --- | --- |
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed |
-| Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed; detailed ML diagnosis pending |
-| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation after diagnosis |
+| Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including ML diagnosis |
+| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation |
 | Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension |
 
-Follow the [roadmap and completion criteria](docs/roadmap.md). The immediate task is to diagnose the Random Forest margin gap using existing results. Continuous SOC, commitment accounting and suitable market data precede cross-market strategies. Intraday, FCR and aFRR strategies are not yet implemented.
+Follow the [roadmap and completion criteria](docs/roadmap.md). The [Random Forest margin diagnosis](reports/ml_diagnosis_2025.md) is complete. Continuous operation is the next implementation. Continuous SOC, commitment accounting and suitable market data precede cross-market strategies. Intraday, FCR and aFRR strategies are not yet implemented.
 
 ## Repository structure
 
@@ -71,7 +71,7 @@ Candidate sources to assess include ENTSO-E Transparency Platform, SMARD and RTE
 
 ## Immediate milestone
 
-Explain the ML margin gap with full-period accounting and selected daily schedules, then specify continuous battery operation. See the [current roadmap](docs/roadmap.md); completed market and forecasting results remain linked below.
+Specify and implement continuous battery operation; the ML margin diagnosis is complete. See the [current roadmap](docs/roadmap.md); completed market and forecasting results remain linked below.
 
 ## Background
 
@@ -118,10 +118,10 @@ Run `python scripts/analyse_ml.py` to fit the declared Ridge and Random Forest c
 
 The [test protocol](docs/independent-2025-protocol.md) and runner were frozen before 2025 prices were acquired. The new source exactly reproduced all 2024 project prices, then supplied a previously uninspected 9 January–30 September 2025 period. Existing candidates and January–August 2024 training stayed fixed. See the [report and chart](reports/independent_results_2025.md) for margins, forecast errors, losses, provenance and portfolio wording. Run `python scripts/evaluate_2025.py` followed by `python scripts/report_independent_2025.py`.
 
-## ML diagnosis — daily accounting completed; hourly inspection pending
+## ML diagnosis — completed
 
-See [the diagnosis report](reports/ml_diagnosis_2025.md) for the full-period gross/cycling reconciliation and five adverse/three favourable cases per market. RF cycled less overall; lower cycling costs partly offset lower gross trading margin. Separate sales/purchase attribution and hourly forecast/dispatch/SOC charts require the original hourly dispatch file and execution of `scripts/diagnose_ml_2025.py`. The script has not yet been run; this stage remains partially complete.
+See the [diagnosis and interview explanation](reports/ml_diagnosis_2025.md) and [all 16 hourly cases and charts](reports/ml_diagnosis_hourly_2025.md). The analysis reconciles sales revenue, purchase expenditure and cycling cost and shows both missed opportunities and RF wins. Recovery passed all published daily-result checks; the full reconstructed hourly CSV is saved under data/recovered.
 
 ## Recover hourly data without a local installation
 
-The **Recover dispatch and diagnose ML** GitHub Actions workflow reconstructs the frozen experiment, checks every daily financial result and saves permanent compressed CSV files under [data/recovered](data/recovered/README.md). It also provides an uncompressed CSV in a downloadable workflow artifact. Results and the hourly diagnosis appear only after a successful run; check the Actions tab and `reports/recovery-status.json`. No user upload is required.
+The **Recover dispatch and diagnose ML** GitHub Actions workflow reconstructs the frozen experiment, checks every daily financial result and saves permanent compressed CSV files under [data/recovered](data/recovered/README.md). It also provides an uncompressed CSV in a downloadable workflow artifact. The first recovery run succeeded; see [run status](reports/recovery-status.json) and [data download instructions](data/recovered/README.md). No user upload is required.

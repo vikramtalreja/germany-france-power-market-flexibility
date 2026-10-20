@@ -1,70 +1,66 @@
-# Random Forest margin diagnosis — 2025
+# Random Forest margin diagnosis — completed
 
-## Scope and execution status
+Recovery and hourly analysis completed on 20 October 2026 through [GitHub Actions](https://github.com/vikramtalreja/germany-france-power-market-flexibility/actions/runs/39464466134). No local installation or user upload is required.
 
-Daily accounting and deterministic case selection completed from committed results. Hourly revenue/purchase decomposition and forecast/price/dispatch/SOC charts are pending execution: the original git-ignored hourly dispatch file is not available through GitHub, and the execution environment was unavailable on 20 October 2026. No hourly explanations are inferred from daily totals.
+## What was verified
 
-Compare the original validation-margin-selected forest (DE-LU: rf_depth_6_leaf_5; FR: rf_depth_6_leaf_20) with seven_day_same_hour over 9 January–30 September 2025. This is retrospective diagnosis of the inspected holdout, with no retuning or reselection.
+Four public API responses match the original SHA256 fingerprints exactly. The frozen models and unchanged optimiser regenerated 76,308 hourly strategy rows; all 3,180 daily schedules reconcile with the original published results, with maximum net-margin discrepancy about EUR1.14e-13. All 15 existing tests and the additional hourly physical/accounting checks passed.
 
-## Full-period accounting
+The original hourly file had no retained hash, so this is a reconstruction validated against daily results, not proof of byte-identical original dispatch where solver ties exist. Hourly findings below refer to reconstructed schedules. This is retrospective diagnosis of the already inspected 2025 period; models were not retuned.
 
-All differences below are RF minus baseline. Gross margin equals signed sales revenue minus signed purchase expenditure. Net margin equals gross margin minus cycling cost.
+## Why RF earned less overall
 
-| Market | Gross margin difference, EUR | Cycling cost difference, EUR | Net margin difference, EUR | Discharged energy difference, MWh |
-|---|---:|---:|---:|---:|
-| DE-LU | -2790.95 | -144.33 | -2646.62 | -14.43 |
-| FR | -6494.49 | -2174.80 | -4319.68 | -217.48 |
+Differences are RF minus seven-day averaging for the original validation-margin-selected forest in each market.
 
-RF's lower cycling cost partially offsets its gross-margin shortfall. It does not explain the shortfall: DE-LU gross margin was EUR2,790.95 lower, offset by EUR144.33 lower cycling cost; France gross margin was EUR6,494.49 lower, offset by EUR2,174.80 lower cycling cost. France's RF discharged 217.48 MWh less across the period. This establishes lower activity, not why its forecasts chose that activity or whether every extra baseline cycle was profitable.
+| Contribution to net difference | DE-LU, EUR | France, EUR |
+|---|---:|---:|
+| Change in sales revenue | -4,236.85 | -25,929.41 |
+| Benefit from lower purchase expenditure | +1,445.91 | +19,434.93 |
+| Benefit from lower cycling cost | +144.33 | +2,174.80 |
+| **Net margin difference** | **-2,646.62** | **-4,319.68** |
 
-RF outperformed on 103 German days and underperformed on 154 (8 effectively tied), versus 86 and 164 French days (15 tied), using EUR0.000001 as the daily tie tolerance. The results are not a universal rejection of ML.
+RF spent less on buying energy and cycling, but the reduction in sales revenue was larger. This mixes price and volume effects; it does not mean RF always received a worse unit sale price. In fact, several cases show better average sale prices but insufficient traded volume.
 
-## Selected days
+## What the hourly evidence explains
 
-Five largest negative paired differences and three largest positive paired differences per zone; chronological date breaks exact ties. Selection uses net margin, not whether RF itself lost money.
+### France: narrow forecast spreads sometimes make inactivity optimal
 
-| Market | Case | Date | Baseline net, EUR | RF net, EUR | Difference, EUR | Discharge difference, MWh |
-|---|---|---|---:|---:|---:|---:|
-| DE-LU | underperformance 1 | 2025-01-20 | 1028.88 | 639.79 | -389.09 | -1.90 |
-| DE-LU | underperformance 2 | 2025-01-21 | 368.26 | 167.64 | -200.61 | -1.95 |
-| DE-LU | underperformance 3 | 2025-04-27 | 407.65 | 213.80 | -193.85 | -0.95 |
-| DE-LU | underperformance 4 | 2025-05-11 | 627.67 | 439.58 | -188.09 | 0.05 |
-| DE-LU | underperformance 5 | 2025-02-14 | 317.25 | 132.00 | -185.25 | -2.85 |
-| DE-LU | outperformance 1 | 2025-06-30 | 279.77 | 405.84 | 126.07 | 1.90 |
-| DE-LU | outperformance 2 | 2025-08-05 | 109.20 | 219.49 | 110.29 | 1.80 |
-| DE-LU | outperformance 3 | 2025-06-01 | 111.57 | 187.54 | 75.98 | -0.90 |
-| FR | underperformance 1 | 2025-01-20 | 604.92 | 0.00 | -604.92 | -3.79 |
-| FR | underperformance 2 | 2025-02-17 | 236.99 | 0.00 | -236.99 | -3.70 |
-| FR | underperformance 3 | 2025-01-15 | 277.95 | 48.05 | -229.90 | -3.70 |
-| FR | underperformance 4 | 2025-01-21 | 204.85 | 0.00 | -204.85 | -3.79 |
-| FR | underperformance 5 | 2025-01-17 | 148.33 | -17.79 | -166.12 | -1.99 |
-| FR | outperformance 1 | 2025-05-11 | 139.35 | 247.01 | 107.66 | -2.70 |
-| FR | outperformance 2 | 2025-07-07 | 5.84 | 88.08 | 82.24 | -0.05 |
-| FR | outperformance 3 | 2025-05-10 | 181.13 | 254.36 | 73.24 | -1.05 |
+On January 20, RF forecast prices between EUR98.49 and EUR106.20/MWh; seven-day averaging forecast EUR107.34–188.04/MWh. At 90% round-trip efficiency and EUR10/MWh discharged cycling cost, buying at EUR98.49 requires a sale price above roughly EUR119.43/MWh to cover these costs for a complete cycle. Even the RF forecast maximum is below that threshold. With equal starting/ending SOC, inactivity is therefore economically consistent with its forecast.
 
-### Supported interpretations
+Actual prices offered valuable opportunities: the baseline earned EUR604.92 while RF earned zero. RF also stayed idle on January 21 and February 17. This explains the forecast-to-decision mechanism in these cases; it does not establish why the forest learned that compressed price range.
 
-- **France, January 20, February 17 and January 21:** RF daily margin and discharged energy are zero, while the baseline earns positive margin. Given equal starting/ending SOC, losses and no simultaneous operation in the existing model, these are idle RF days within numerical tolerance. The hourly forecasts are needed to explain why the optimiser chose inactivity.
-- **France, January 17:** RF loses EUR17.79 while the baseline earns EUR148.33. Lower cycling cost does not rescue its worse realised gross margin.
-- **Germany, January 20:** RF earns positive EUR639.79 but trails the baseline by EUR389.09 and discharges 1.90 MWh less. Relative underperformance is not an outright loss.
-- **Germany, May 11:** RF discharges slightly more and earns less gross margin. Lower activity cannot explain every adverse case.
-- **France, May 11:** RF earns EUR80.66 more gross margin while saving EUR27.00 in cycling cost; its net advantage is EUR107.66. More cycling is not always better.
-- **Germany, June 30:** RF's EUR145.05 gross advantage exceeds its EUR18.97 extra cycling cost, leaving EUR126.07 more net margin.
+### Germany: selecting a higher sale price can still earn less
 
-## What the daily data cannot resolve
+On January 20, RF's weighted sale price was EUR487.86/MWh versus EUR448.48 for the baseline. But RF discharged only 1.90 MWh versus 3.79 MWh. At 08:00, actual price was EUR431.99/MWh and both batteries began the hour full; the baseline discharged 1 MW while RF held its energy. RF's eventual higher average sale price did not compensate for lower activity: net margin was EUR389.09 lower.
 
-Gross margin is sales minus purchases. Daily gross totals cannot uniquely identify those two components. We cannot yet say that RF bought too expensively, sold too cheaply, discharged too early, or missed a particular price extreme. Those require the unchanged hourly schedules and prices; no causal model-behaviour claim is made here.
+This is a direct example of why neither MAE nor weighted sale price alone measures strategy value.
 
-## Hourly follow-through
+### Germany: filling too early can miss deeper negative prices
 
-Run `python scripts/diagnose_ml_2025.py` with the original `data/processed/independent_dispatch_2025.csv`. The script verifies hourly settlement against the committed daily results before exporting separate signed sales/purchase/cycling differences, the 16 selected schedules and four-panel charts (actual/forecast prices, charging, discharge, SOC). It does not refit or optimise. If the hourly file is missing, recover it from the original workspace or reproduce the frozen evaluation using its documented inputs and check reconciliation; do not substitute fabricated schedules.
+On May 11 at 13:00, actual price was EUR-250.32/MWh. RF began the hour at 1.897 MWh SOC, leaving only enough capacity to charge about 0.108 MWh from the grid. The baseline began at 0.949 MWh and charged 1 MWh. RF's weighted purchase price was EUR-23.98/MWh versus EUR-72.78 for the baseline. The purchase-side disadvantage outweighed RF's slightly higher sales revenue; net margin was EUR188.09 lower.
 
-The script has been added but not executed or runtime-tested in this session. Its hourly outputs are therefore not claimed as results.
+The important mechanism is the timing of available storage headroom, not merely identifying a negative-price hour.
 
-## Evidence
+### RF wins demonstrate the reverse mechanism
 
-- Inputs: [daily results](independent_daily_2025.csv), [aggregate metrics](independent_metrics_2025.csv), [frozen selections](ml_selection_2024.json).
-- Outputs: [paired daily accounting](ml_diagnosis_daily_2025.csv), [selected cases](ml_diagnosis_cases_2025.csv), [totals](ml_diagnosis_totals_2025.csv).
-- Checks executed in JavaScript against retrieved CSV contents: 265 matched dates per strategy/zone, daily gross-minus-cost reconciliation and agreement of strategy net totals with published aggregate metrics.
+In France on May 11, RF bought at a weighted EUR-106.46/MWh versus EUR-20.05 for the baseline, while cycling less. At 15:00, when actual price was EUR-109.84, RF had room to charge 1 MW while the baseline charged only 0.108 MW. RF earned EUR107.66 more net margin. In Germany on June 30, additional discharge revenue outweighed extra purchase and cycling costs, producing EUR126.07 more margin.
 
-Interview wording supported now: “The selected forests' lower simulated margins came from lower gross trading margin, partly offset by reduced cycling cost. French RF even remained idle on several days when the baseline traded profitably. Hourly diagnosis is needed to separate buy-price, sell-price and timing effects.”
+These observations support an asset-specific explanation: preserve energy for valuable sale hours and headroom for valuable charging hours. They do not establish a general rule that less cycling, more cycling or one model family is superior.
+
+## All selected cases and charts
+
+The five largest underperformance and three largest outperformance days per market are documented in [the full hourly report](ml_diagnosis_hourly_2025.md), with forecast and actual prices, charging, discharging, SOC, signed cashflow contributions and missed-spike actions. Individual hourly cashflows are not standalone profits because energy links hours.
+
+- [All 530 paired daily comparisons](ml_diagnosis_daily_2025.csv)
+- [16 selected cases](ml_diagnosis_cases_2025.csv)
+- [Hourly selected-case CSV](ml_diagnosis_selected_dispatch_2025.csv)
+- [Sales/purchase/cycling totals](ml_diagnosis_sales_purchase_totals_2025.csv)
+- [Daily hourly-reconciled attribution](ml_diagnosis_hourly_reconciled_daily_2025.csv)
+- [Recovery audit](dispatch_recovery_2025.json)
+- [Full compressed dispatch and source price CSV files](../data/recovered/README.md)
+
+## Interview explanation and next step
+
+“I found that the financial gap depended on dispatch decisions. On some French days the forest predicted too little spread to justify cycling, so the battery stayed idle despite profitable actual opportunities. On a German negative-price day it filled too early and had little space left at the lowest price. I reconciled the differences through sales, purchases and cycling costs and retained examples where the forest outperformed.”
+
+The next stage is continuous operation: carry SOC and existing commitments across days, specify terminal-energy treatment and transaction costs, and compare under consistent assumptions. The daily 50% SOC reset remains in all results here. New experiments on these inspected periods are retrospective, not fresh holdout tests.

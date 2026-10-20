@@ -5,8 +5,8 @@ Agreed sequence: 20 October 2026. This roadmap is the current implementation ord
 | Version | Main question | Status |
 | --- | --- | --- |
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed under daily terminal-SOC constraints |
-| Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed; detailed ML diagnosis pending |
-| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation, after ML diagnosis |
+| Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including detailed ML diagnosis |
+| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation |
 | Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension; pending data and execution specification |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension; product selection and rules pending |
 
@@ -16,13 +16,13 @@ Implemented separate 1 MW / 2 MWh price-taking batteries in DE-LU and France usi
 
 Evidence: [battery benchmark](../reports/battery_benchmark_2024.md). This is a daily-constrained perfect-foresight bound, not an unrestricted annual optimum or live trading income.
 
-## 2. Forecast-driven dispatch — completed; diagnosis next
+## 2. Forecast-driven dispatch — completed, including diagnosis
 
 Implemented historical baselines, chronological Ridge/Random Forest evaluation and a fixed-model 2025 transfer test. Forecasts determine schedules; observed prices settle unchanged schedules. See [2024 ML results](../reports/ml_results_2024.md) and [2025 transfer test](../reports/independent_results_2025.md).
 
-### Immediate task: explain the ML margin gap
+### ML margin gap diagnosis — completed
 
-Progress on 20 October 2026: [daily accounting and case selection completed](../reports/ml_diagnosis_2025.md). Hourly sales/purchase decomposition and forecast/dispatch/SOC plots remain pending access to the original hourly file and an execution environment. The follow-through script is committed but unexecuted.
+Completed on 20 October 2026: [full diagnosis](../reports/ml_diagnosis_2025.md), signed sales/purchase/cycling attribution, all 16 selected schedules and charts. Reconstructed hourly data reconciles with original daily results and is permanently retained under data/recovered. Continuous operation is now the next implementation.
 
 - Compare the previously selected Random Forest against seven-day averaging separately in each zone, using the existing 2025 test outputs.
 - Reconcile full-period and daily differences as sales revenue minus purchase expenditure minus cycling cost, with signed prices retained.

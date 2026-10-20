@@ -131,3 +131,13 @@ Added a GitHub Actions job to reconstruct hourly dispatch without a local user i
 The full reconstructed dispatch and price inputs are saved as compressed CSV files under data/recovered, with an additional downloadable workflow artifact. Selected-case schedules, signed sales/purchase/cycling attribution and 16 charts are saved under reports. A separate hourly report is written only after successful checks. The original hourly file had no retained fingerprint, so matching daily totals does not prove identical solver tie-breaking; hourly explanations refer to reconstructed schedules.
 
 Workflow success is not assumed by this entry: consult reports/recovery-status.json and the recovery audit. If a source hash, package installation or financial check fails, the job stops and does not publish unverified results.
+
+## 13. Recovery and full hourly diagnosis — completed
+
+The remote workflow succeeded on 20 October 2026: 15 tests passed, all four input response hashes matched, 76,308 hourly rows were reconstructed, and all 3,180 daily schedules reconciled (maximum net discrepancy about EUR1.14e-13). Python was 3.12.15 versus the earlier 3.12.14; recorded numerical library versions matched. Original hourly bytes had no fingerprint, so hourly conclusions refer to reconstructed schedules with matching daily outcomes.
+
+Saved compressed full dispatch and public input price CSVs in data/recovered, plus a 90-day workflow artifact containing the uncompressed CSV. Added 16 four-panel case charts, selected hourly schedules and exact sales/purchase/cycling attribution. This removes the dependency on an ephemeral workspace for the diagnosis.
+
+Findings: RF sales revenue was EUR4,236.85 lower in Germany and EUR25,929.41 lower in France; purchase savings and lower cycling costs partly offset these reductions. France January 20 had a narrow RF forecast range insufficient to cover losses/cycling, causing inactivity. Germany January 20 had higher weighted RF sale prices but less discharged volume. Germany May 11 RF entered the deepest negative-price hour almost full, while France May 11 RF preserved more charging headroom and outperformed. These demonstrate decision mechanisms without claiming why the model learned its forecast shape.
+
+See [completed diagnosis](../reports/ml_diagnosis_2025.md). Continuous SOC with explicit commitments and terminal treatment is now the next stage. The original experiment configurations/results are unchanged, and the inspected 2025 period is not a new test set.
