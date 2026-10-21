@@ -7,7 +7,7 @@ Agreed sequence: 20 October 2026. This roadmap is the current implementation ord
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed under daily terminal-SOC constraints |
 | Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including detailed ML diagnosis |
 | Continuous operation | Does the result survive realistic interday SOC decisions? | Completed; retrospective comparison and sensitivities |
-| Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension; pending data and execution specification |
+| Day-ahead + intraday | Can later information improve an existing position? | Engine/synthetic examples tested; historical data and execution validation pending |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension; product selection and rules pending |
 
 ## 1. Day-ahead benchmark — completed
@@ -58,9 +58,11 @@ Implementation requirements:
 
 Done when: boundary continuity, energy conservation, commitment feasibility, no simultaneous charge/discharge, future-data perturbation and cashflow reconciliation checks pass; a common-period comparison and terminal-condition sensitivity are documented. No claim that continuous operation must improve a forecast strategy.
 
-## 4. Day-ahead + intraday — first cross-market extension
+## 4. Day-ahead + intraday — engine tested, historical evaluation pending
 
 Purpose: evaluate whether later information can improve an existing day-ahead position.
+
+On 21 October 2026 the single-window adjustment engine and synthetic examples were implemented; 28 local tests pass. See [source/execution verification](intraday-data-and-execution.md) and [demonstration](../reports/intraday_synthetic_demo.md). The current API is day-ahead only. No verified usable historical intraday dataset has been acquired, so no historical ID profitability is claimed. DE-LU IDA1 is the target; lot sizes, publication vintages and credible fill assumptions remain prerequisites. Do not mark the historical stage completed based on a synthetic example.
 
 Start with one zone and one explicitly defined intraday trading opportunity. Select the zone based on verified data availability rather than promising coverage of both.
 
@@ -110,3 +112,7 @@ Retained limitations:
 - Actual fundamentals are retrospective context, not auction-time forecast features.
 
 An educational PTDF/RAM network example and additional causal market investigations remain optional parallel learning work. They are not prerequisites for the agreed battery implementation sequence.
+
+## Current print and intraday checkpoint
+
+Day-ahead benchmark, forecast/ML diagnosis and continuous operation are complete. Intraday synthetic engine is tested; suitable historical data and historical execution validation remain prerequisites. Energy plus reserves follows that stage. See [master guide](project-learning-guide.md), chapters 19–21. The uncertainty-aware forecast experiment remains optional.

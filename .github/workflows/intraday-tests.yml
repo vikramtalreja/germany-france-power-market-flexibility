@@ -1,0 +1,24 @@
+name: Intraday accounting tests
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'src/market_flex/intraday.py'
+      - 'tests/test_intraday.py'
+      - 'scripts/demo_intraday.py'
+      - '.github/workflows/intraday-tests.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy==2.3.5 pandas==2.2.3 scikit-learn==1.8.0 pyomo==6.10.1 highspy==1.15.1 matplotlib
+      - run: PYTHONPATH=src python -m unittest discover -s tests
+      - run: python scripts/demo_intraday.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-intraday-accounting
+          path: reports/intraday_synthetic_*.csv

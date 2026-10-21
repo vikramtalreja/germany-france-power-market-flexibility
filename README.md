@@ -23,10 +23,10 @@ See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/p
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed |
 | Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including ML diagnosis |
 | Continuous operation | Does the result survive realistic interday SOC decisions? | Completed; retrospective comparison and sensitivities |
-| Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension |
+| Day-ahead + intraday | Can later information improve an existing position? | Engine and synthetic examples tested; historical data/execution validation pending |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension |
 
-Follow the [roadmap and completion criteria](docs/roadmap.md). The [Random Forest margin diagnosis](reports/ml_diagnosis_2025.md) is complete. [Continuous operation](reports/continuous_results_2025.md) is complete, with [interpretation](docs/continuous-operation-findings.md). The next step is verifying intraday data and specifying execution assumptions before implementing incremental trades. Intraday, FCR and aFRR strategies are not yet implemented.
+Follow the [roadmap and completion criteria](docs/roadmap.md). The [Random Forest margin diagnosis](reports/ml_diagnosis_2025.md) is complete. [Continuous operation](reports/continuous_results_2025.md) is complete, with [interpretation](docs/continuous-operation-findings.md). The next step is verifying intraday data and specifying execution assumptions before implementing incremental trades. The intraday adjustment engine is implemented and tested with synthetic data; historical intraday strategy performance, FCR and aFRR are not demonstrated.
 
 ## Repository structure
 
@@ -132,4 +132,16 @@ The battery now carries physical SOC between days and projects tomorrow's openin
 
 Lower purchase expenditure and cycling explain most of the improvement; the battery usually ends empty rather than storing energy overnight. Read the [results](reports/continuous_results_2025.md), [interpretation and interview explanation](docs/continuous-operation-findings.md), [frozen protocol](docs/continuous-operation-protocol.md) and [audit](reports/continuous_audit_2025.json). All 20 tests and full-run accounting/physical checks passed. Full dispatch and the separate trade ledger are retained in [data/continuous](data/continuous/README.md).
 
-Reproduce with `python scripts/analyse_continuous.py` using the recovered inputs and versions recorded in the audit, or run the **Continuous battery operation** GitHub Actions workflow. The implemented scope remains simulated day-ahead operation; intraday and reserve strategies are future stages.
+Reproduce with `python scripts/analyse_continuous.py` using the recovered inputs and versions recorded in the audit, or run the **Continuous battery operation** GitHub Actions workflow. Historical results remain day-ahead only. The new intraday engine has synthetic validation; historical intraday evaluation and reserve strategies remain future work.
+
+## Intraday extension and printable learning guide
+
+[Intraday data and execution verification](docs/intraday-data-and-execution.md) distinguishes IDA1 auctions from ID1 indices and records the historical-data gap. The new engine preserves original day-ahead positions/cashflows, adds signed intraday adjustments, enforces physical feasibility and volume limits, and settles actual ID prices only after planning. All 28 tests pass locally. [Synthetic worked examples](reports/intraday_synthetic_demo.md) show beneficial and losing adjustments; these are not historical profitability results.
+
+Run `python scripts/demo_intraday.py` or the **Intraday accounting tests** GitHub Actions workflow. Historical DE-LU IDA1 evaluation awaits a verified usable dataset, publication information and execution specification. No actual intraday prices have been invented or replaced with day-ahead data.
+
+Read the [complete learning and presentation guide](docs/project-learning-guide.md): beginner market concepts, battery equations, forecast evaluation, findings, intraday ledger examples, glossary and a five-minute presentation script. Printable Word/PDF versions are delivered separately; this Markdown source stays with the project.
+
+## Printable master guide
+
+Open [docs/printable](docs/printable/README.md) and download **Power_Market_BESS_Project_Guide.pdf**. The guide explains the whole project, historical findings, concepts, synthetic intraday accounting and the plan for auction data. Current revision: 21 October 2026, revision 2.

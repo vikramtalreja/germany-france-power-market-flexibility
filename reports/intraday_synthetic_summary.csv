@@ -1,0 +1,3 @@
+case,synthetic,original_da_net_eur,id_cashflow_eur,id_fees_eur,combined_net_eur,incremental_net_eur
+forecast_materialises,True,150.0,300.0,8.0,442.0,292.0
+forecast_wrong,True,150.0,-300.0,8.0,-158.0,-308.0

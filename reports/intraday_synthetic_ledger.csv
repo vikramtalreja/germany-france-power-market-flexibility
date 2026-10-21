@@ -1,0 +1,17 @@
+timestamp_utc,market,signed_position_mwh,price_eur_mwh,cashflow_eur,fee_eur,case,synthetic
+2025-01-09 00:00:00+00:00,DA,-1.0,10.0,-10.0,0.0,forecast_materialises,True
+2025-01-09 01:00:00+00:00,DA,1.0,100.0,100.0,0.0,forecast_materialises,True
+2025-01-09 02:00:00+00:00,DA,-1.0,20.0,-20.0,0.0,forecast_materialises,True
+2025-01-09 03:00:00+00:00,DA,1.0,80.0,80.0,0.0,forecast_materialises,True
+2025-01-09 00:00:00+00:00,ID,2.0,100.0,200.0,2.0,forecast_materialises,True
+2025-01-09 01:00:00+00:00,ID,-2.0,10.0,-20.0,2.0,forecast_materialises,True
+2025-01-09 02:00:00+00:00,ID,2.0,80.0,160.0,2.0,forecast_materialises,True
+2025-01-09 03:00:00+00:00,ID,-2.0,20.0,-40.0,2.0,forecast_materialises,True
+2025-01-09 00:00:00+00:00,DA,-1.0,10.0,-10.0,0.0,forecast_wrong,True
+2025-01-09 01:00:00+00:00,DA,1.0,100.0,100.0,0.0,forecast_wrong,True
+2025-01-09 02:00:00+00:00,DA,-1.0,20.0,-20.0,0.0,forecast_wrong,True
+2025-01-09 03:00:00+00:00,DA,1.0,80.0,80.0,0.0,forecast_wrong,True
+2025-01-09 00:00:00+00:00,ID,2.0,10.0,20.0,2.0,forecast_wrong,True
+2025-01-09 01:00:00+00:00,ID,-2.0,100.0,-200.0,2.0,forecast_wrong,True
+2025-01-09 02:00:00+00:00,ID,2.0,20.0,40.0,2.0,forecast_wrong,True
+2025-01-09 03:00:00+00:00,ID,-2.0,80.0,-160.0,2.0,forecast_wrong,True

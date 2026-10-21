@@ -1,0 +1,3 @@
+# Project maintenance
+
+At every substantive project milestone, update docs/project-learning-guide.md, docs/roadmap.md, docs/development-notes.md and relevant machine-readable status. Rebuild docs/printable/Power_Market_BESS_Project_Guide.pdf with scripts/build_project_guide.py and visually inspect it. Commit source and PDF together, keeping the download path stable. Record revision date and evidence status. Never label synthetic demonstrations as historical performance. Preserve original day-ahead positions in intraday extensions. Do not publish licensed raw data without redistribution permission.

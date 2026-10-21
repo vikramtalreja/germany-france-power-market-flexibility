@@ -152,3 +152,18 @@ The GitHub workflow succeeded with 20 tests and full-run physical, information-t
 Main zero-fee gains against daily reset: EUR4,448.94 (+8.04%) DE-LU and EUR6,435.47 (+19.13%) France. Purchase savings and reduced cycling explain most of the gain. France ended empty on all 264 internal boundaries; Germany on 257. This mostly shows the benefit of removing forced daily recharging, not substantial overnight energy storage. The provisional 0%/100% terminal sensitivities yielded identical committed trajectories to 50%; do not generalise that invariance. Fee-matched gains remained positive. See [findings](continuous-operation-findings.md) for exact component attribution and interview wording, and [generated results](../reports/continuous_results_2025.md).
 
 Limitations: already inspected 2025 data, repeated two-day forecast profile, perfect acceptance/execution, no imbalance, bid/ask, intraday or reserve participation. Daily P&L reflects inventory timing; equal final SOC makes full-period comparisons more informative. Next: verify intraday data and freeze an execution specification before extending the ledger with incremental trades.
+
+
+## 15. Incremental intraday accounting and learning guide — 21 October 2026
+
+Verified source/product distinctions: the Energy-Charts public price API supplies day-ahead prices; SMARD intraday generation forecasts are not ID prices; IDA1 auctions differ from continuous-market ID1 indices. Official ENTSO-E sources establish IDA timing. A complete usable DE-LU historical intraday series, publication vintages and execution metadata were not acquired. Recorded this limitation and acquisition gates rather than inventing prices or claiming a historical backtest.
+
+Implemented one pre-delivery ID adjustment with unchanged original DA quantities/prices, separate signed ID trades, physical reconciliation, original start/end SOC, volume caps, forecast issue-time checks and separate actual-price settlement. Supports quarter-hour, half-hour and hourly energy accounting. Full-fill continuous-quantity auction assumptions are explicit; no exchange lot sizes, partial fills, order book or imbalance exposure is represented. Eight new tests plus the existing 20 pass locally.
+
+Published entirely synthetic four-hour examples: original DA cashflow EUR150; identical adjustments yield incremental EUR292 when the forecast materialises and EUR-308 when it is wrong, after EUR8 ID fees. Demo efficiency is deliberately 100% with zero wear for hand arithmetic, unlike the historical model. These are accounting examples, not historical profits.
+
+Created a complete beginner-to-interview project guide, including market basics, negative-price interpretation, physical equations, forecast evaluation, chronological validation, RF diagnosis, continuous SOC, intraday accounting, evidence limitations, glossary and presentation practice. Markdown source is retained in docs/project-learning-guide.md; printable versions are delivered separately.
+
+## 21 October 2026 — printable master and intraday readiness
+
+Added guide chapters 19–21: agreed stage sequence, sample rejection reasons, broader EPEX enquiry, dataset acceptance and timestamp checks, DA-preserving quarter-hour alignment, forecast timing, execution assumptions and evaluation outputs. Added reproducible PDF builder and stable printable folder. Historical intraday backtest remains pending. Update the master guide and rebuild its PDF at each future milestone.

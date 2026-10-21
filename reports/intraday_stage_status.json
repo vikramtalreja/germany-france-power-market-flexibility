@@ -1,0 +1,10 @@
+{
+  "engine": "implemented",
+  "tests": "28 passed",
+  "historical_backtest": "not_run",
+  "reason": "No verified usable historical intraday dataset and publication/execution metadata acquired",
+  "demonstration": "synthetic, not historical",
+  "zone_target": "DE-LU",
+  "venue_target": "IDA1 auction, not continuous SIDC",
+  "checked_on": "2026-10-21"
+}
