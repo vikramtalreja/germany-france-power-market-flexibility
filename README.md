@@ -2,7 +2,7 @@
 
 A Python portfolio project connecting electricity market fundamentals with battery optimisation, developed by Vikram Talreja.
 
-**Status: 2024 market analysis, BESS benchmarks and ML comparison completed; fixed-model 2025 robustness test completed.** See the [independent 2025 results](reports/independent_results_2025.md). Seven-day averaging retained the highest simulated margin among the tested forecast strategies in both markets, despite lower forecast error from some ML models. All results are simulated and subject to the documented market-execution limitations.
+**Status: market analysis, forecasting, ML diagnosis and continuous battery operation completed.** See the [independent 2025 results](reports/independent_results_2025.md). Seven-day averaging retained the highest simulated margin among the tested forecast strategies in both markets, despite lower forecast error from some ML models. All results are simulated and subject to the documented market-execution limitations.
 
 ## Project direction
 
@@ -22,11 +22,11 @@ See [Forecast-Driven BESS Trading: project direction and experiment plan](docs/p
 | --- | --- | --- |
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed |
 | Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including ML diagnosis |
-| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation |
+| Continuous operation | Does the result survive realistic interday SOC decisions? | Completed; retrospective comparison and sensitivities |
 | Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension |
 
-Follow the [roadmap and completion criteria](docs/roadmap.md). The [Random Forest margin diagnosis](reports/ml_diagnosis_2025.md) is complete. Continuous operation is the next implementation. Continuous SOC, commitment accounting and suitable market data precede cross-market strategies. Intraday, FCR and aFRR strategies are not yet implemented.
+Follow the [roadmap and completion criteria](docs/roadmap.md). The [Random Forest margin diagnosis](reports/ml_diagnosis_2025.md) is complete. [Continuous operation](reports/continuous_results_2025.md) is complete, with [interpretation](docs/continuous-operation-findings.md). The next step is verifying intraday data and specifying execution assumptions before implementing incremental trades. Intraday, FCR and aFRR strategies are not yet implemented.
 
 ## Repository structure
 
@@ -71,7 +71,7 @@ Candidate sources to assess include ENTSO-E Transparency Platform, SMARD and RTE
 
 ## Immediate milestone
 
-Specify and implement continuous battery operation; the ML margin diagnosis is complete. See the [current roadmap](docs/roadmap.md); completed market and forecasting results remain linked below.
+Verify one market’s intraday data and execution assumptions, then extend the preserved day-ahead ledger with incremental intraday trades. Continuous SOC and ML diagnosis are complete. See the [current roadmap](docs/roadmap.md); completed market and forecasting results remain linked below.
 
 ## Background
 
@@ -125,3 +125,11 @@ See the [diagnosis and interview explanation](reports/ml_diagnosis_2025.md) and 
 ## Recover hourly data without a local installation
 
 The **Recover dispatch and diagnose ML** GitHub Actions workflow reconstructs the frozen experiment, checks every daily financial result and saves permanent compressed CSV files under [data/recovered](data/recovered/README.md). It also provides an uncompressed CSV in a downloadable workflow artifact. The first recovery run succeeded; see [run status](reports/recovery-status.json) and [data download instructions](data/recovered/README.md). No user upload is required.
+
+## Continuous operation: why daily boundaries matter
+
+The battery now carries physical SOC between days and projects tomorrow's opening state through existing commitments. It plans two delivery days but commits only the first. Under the unchanged seven-day forecast, simulated zero-fee margin increased from EUR55,361.95 to EUR59,810.90 in DE-LU and from EUR33,633.12 to EUR40,068.58 in France over 9 January–30 September 2025. Initial and final energy are matched. This is retrospective evidence, not a new unseen test or demonstrated trading income.
+
+Lower purchase expenditure and cycling explain most of the improvement; the battery usually ends empty rather than storing energy overnight. Read the [results](reports/continuous_results_2025.md), [interpretation and interview explanation](docs/continuous-operation-findings.md), [frozen protocol](docs/continuous-operation-protocol.md) and [audit](reports/continuous_audit_2025.json). All 20 tests and full-run accounting/physical checks passed. Full dispatch and the separate trade ledger are retained in [data/continuous](data/continuous/README.md).
+
+Reproduce with `python scripts/analyse_continuous.py` using the recovered inputs and versions recorded in the audit, or run the **Continuous battery operation** GitHub Actions workflow. The implemented scope remains simulated day-ahead operation; intraday and reserve strategies are future stages.

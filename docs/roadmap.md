@@ -6,7 +6,7 @@ Agreed sequence: 20 October 2026. This roadmap is the current implementation ord
 | --- | --- | --- |
 | Day-ahead benchmark | What is achievable with perfect price knowledge? | Completed under daily terminal-SOC constraints |
 | Forecast-driven dispatch | Does forecast accuracy translate into financial value? | Completed, including detailed ML diagnosis |
-| Continuous operation | Does the result survive realistic interday SOC decisions? | Next implementation |
+| Continuous operation | Does the result survive realistic interday SOC decisions? | Completed; retrospective comparison and sensitivities |
 | Day-ahead + intraday | Can later information improve an existing position? | First cross-market extension; pending data and execution specification |
 | Energy + reserves | How should scarce battery capability be allocated? | Following extension; product selection and rules pending |
 
@@ -22,7 +22,7 @@ Implemented historical baselines, chronological Ridge/Random Forest evaluation a
 
 ### ML margin gap diagnosis — completed
 
-Completed on 20 October 2026: [full diagnosis](../reports/ml_diagnosis_2025.md), signed sales/purchase/cycling attribution, all 16 selected schedules and charts. Reconstructed hourly data reconciles with original daily results and is permanently retained under data/recovered. Continuous operation is now the next implementation.
+Completed on 20 October 2026: [full diagnosis](../reports/ml_diagnosis_2025.md), signed sales/purchase/cycling attribution, all 16 selected schedules and charts. Reconstructed hourly data reconciles with original daily results and is permanently retained under data/recovered. Continuous operation was subsequently completed; see stage 3.
 
 - Compare the previously selected Random Forest against seven-day averaging separately in each zone, using the existing 2025 test outputs.
 - Reconcile full-period and daily differences as sales revenue minus purchase expenditure minus cycling cost, with signed prices retained.
@@ -33,9 +33,13 @@ Completed on 20 October 2026: [full diagnosis](../reports/ml_diagnosis_2025.md),
 
 Done when: a reproducible diagnosis script, full daily attribution, selected-case tables/plots, reconciliation checks and a short analyst report are committed. Add what we did, why, findings and limitations to development notes.
 
-## 3. Continuous operation — next implementation
+## 3. Continuous operation — completed
 
 Purpose: remove the forced daily 50% SOC restoration and represent how today's decisions affect tomorrow's flexibility.
+
+Completed on 21 October 2026. The [frozen protocol](continuous-operation-protocol.md), [results](../reports/continuous_results_2025.md), [interpretation](continuous-operation-findings.md) and [audit](../reports/continuous_audit_2025.json) document the implementation. All 20 tests passed; 101,744 hourly policy rows and 4,240 daily rows were checked. Zero-fee continuous margin increased by EUR4,448.94 in DE-LU and EUR6,435.47 in France. The two terminal-target sensitivities produced identical committed schedules. This inspected period remains retrospective. Intraday data/execution specification is now next.
+
+The requirements below record the completed stage's scope and acceptance criteria.
 
 Before running results, freeze a new experiment specification covering:
 - Decision times, forecast issue times, planning horizon and which portion of a plan becomes committed.

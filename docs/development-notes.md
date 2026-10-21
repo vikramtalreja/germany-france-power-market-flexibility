@@ -141,3 +141,14 @@ Saved compressed full dispatch and public input price CSVs in data/recovered, pl
 Findings: RF sales revenue was EUR4,236.85 lower in Germany and EUR25,929.41 lower in France; purchase savings and lower cycling costs partly offset these reductions. France January 20 had a narrow RF forecast range insufficient to cover losses/cycling, causing inactivity. Germany January 20 had higher weighted RF sale prices but less discharged volume. Germany May 11 RF entered the deepest negative-price hour almost full, while France May 11 RF preserved more charging headroom and outperformed. These demonstrate decision mechanisms without claiming why the model learned its forecast shape.
 
 See [completed diagnosis](../reports/ml_diagnosis_2025.md). Continuous SOC with explicit commitments and terminal treatment is now the next stage. The original experiment configurations/results are unchanged, and the inspected 2025 period is not a new test set.
+
+
+## 14. Continuous operation — completed, 21 October 2026
+
+Why: daily 50% SOC restoration was a modelling restriction that could distort financial decisions. Frozen configuration and protocol were committed before execution. Implemented two-day planning with first-day commitment, projected opening SOC through existing commitments, physical state carryover, signed trade ledger and matched initial/final inventory. Kept the seven-day forecast unchanged and repeated its eligible profile for the provisional day.
+
+The GitHub workflow succeeded with 20 tests and full-run physical, information-timing, baseline-reconciliation and accounting checks. Retained 101,744 hourly policy rows, 4,240 daily rows, decision audits, compressed full dispatch/ledger, summary tables and a chart. All strategies remained below matched full-period perfect-foresight bounds. Existing experiments were preserved.
+
+Main zero-fee gains against daily reset: EUR4,448.94 (+8.04%) DE-LU and EUR6,435.47 (+19.13%) France. Purchase savings and reduced cycling explain most of the gain. France ended empty on all 264 internal boundaries; Germany on 257. This mostly shows the benefit of removing forced daily recharging, not substantial overnight energy storage. The provisional 0%/100% terminal sensitivities yielded identical committed trajectories to 50%; do not generalise that invariance. Fee-matched gains remained positive. See [findings](continuous-operation-findings.md) for exact component attribution and interview wording, and [generated results](../reports/continuous_results_2025.md).
+
+Limitations: already inspected 2025 data, repeated two-day forecast profile, perfect acceptance/execution, no imbalance, bid/ask, intraday or reserve participation. Daily P&L reflects inventory timing; equal final SOC makes full-period comparisons more informative. Next: verify intraday data and freeze an execution specification before extending the ledger with incremental trades.
