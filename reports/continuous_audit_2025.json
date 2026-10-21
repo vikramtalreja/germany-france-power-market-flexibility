@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "retrospective": true,
+  "config_sha256": "5cdef6a2e2b1385e654c48a21b4bfbcd8ce4d45ec61fa425e7f7fa52c52951cc",
+  "inputs_sha256": {
+    "data/recovered/prices_DE-LU_2025.csv.gz": "a2f9c476231504670faedccd031b3e3b7f4966728ce4ebbe6a0cbf485b32f80a",
+    "data/recovered/prices_FR_2025.csv.gz": "40da236dcd275e6cbb92593f5935195db1a968081b9f14cdbc019e889f6a0394"
+  },
+  "code_sha256": {
+    "src/market_flex/continuous.py": "d588c728fb549c2e6120e072ac2c81d89d97bd7d043f1c13a1c4536c29d36371",
+    "scripts/analyse_continuous.py": "8abec73a9a9b9ecabb29f4bc652252e3c7426e6a43f19dfbddeaf2941234ab7b",
+    "tests/test_continuous.py": "4a8c478ceadaf2d1f53eab72df4f88d24535b83023ca6e15d6104134c3f92ea2"
+  },
+  "versions": {
+    "python": "3.12.15",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "pyomo": "6.10.1",
+    "highs": "1.15.1"
+  },
+  "checks": [
+    "original zero-fee daily results reconciled",
+    "SOC continuity through all boundaries",
+    "prior commitments preserved",
+    "forecast availability at fixed issuance cutoff",
+    "fixed initial and final SOC",
+    "no simultaneous charge/discharge",
+    "signed ledger cashflow reconciled",
+    "all policies below same-fee global oracle"
+  ],
+  "scored_hours": 101744,
+  "scored_daily_rows": 4240
+}
