@@ -167,3 +167,7 @@ Created a complete beginner-to-interview project guide, including market basics,
 ## 21 October 2026 — printable master and intraday readiness
 
 Added guide chapters 19–21: agreed stage sequence, sample rejection reasons, broader EPEX enquiry, dataset acceptance and timestamp checks, DA-preserving quarter-hour alignment, forecast timing, execution assumptions and evaluation outputs. Added reproducible PDF builder and stable printable folder. Historical intraday backtest remains pending. Update the master guide and rebuild its PDF at each future milestone.
+
+## 21 October 2026 — intraday preparation v1
+
+Verified dated EPEX IDA1 reference specifications. Implemented canonical data validation, DST grids, information cutoff checks, immutable DA quarter-hour allocation and paired financial metrics. Added 11 meaningful tests (39 total passing). Frozen versioned evaluation parameters and failure policy before receiving historical IDA1 data. Updated master guide to revision 3 with implementation/evidence boundaries. Historical dataset, supplier parser, publication evidence and executable fill model remain outstanding.

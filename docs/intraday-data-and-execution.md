@@ -59,10 +59,33 @@ The next historical run must compare retained DA-only cashflows with combined DA
 
 ## Reproduce current implementation
 
-`PYTHONPATH=src python -m unittest discover -s tests` (28 passing tests at this stage).
+`PYTHONPATH=src python -m unittest discover -s tests` (39 passing tests at preparation v1).
 `python scripts/demo_intraday.py` creates clearly labelled synthetic ledger, dispatch and summary CSVs.
 See [synthetic demonstration](../reports/intraday_synthetic_demo.md), [status](../reports/intraday_stage_status.json), `src/market_flex/intraday.py` and `tests/test_intraday.py`.
 
 ## Sample review and next-data protocol
 
 The October 2026 copied table and February 2020 ZIP sample do not supply the required 2025 SIDC IDA1 history. A broader historical-data enquiry has been sent; no subscription purchased. See chapters 19–21 of [the master guide](project-learning-guide.md) for source acceptance, timestamp checks, immutable DA allocation, forecast cutoffs, missing-data policy, matched settlement evaluation and the execution assumptions still requiring historical verification.
+
+## Execution specification v1: verified references versus simulation assumptions
+
+Rechecked 21 October 2026 against EPEX SPOT Trading Brochure **February 2025**, pan-European Intraday Auctions section (PDF page 7):
+https://www.epexspot.com/sites/default/files/2025-02/EPEX%20SPOT%20Trading%20Brochure%202025%20February.pdf
+
+The brochure specifies IDA1 gate D-1 15:00 CET/CEST, nominal results from 15:20, German 15-minute contracts, volume tick 0.1 MW, price tick EUR0.01/MWh, and price limits -9999/+9999 EUR/MWh. These are dated reference specifications; the brochure does not establish every exception, operational delay or rule revision across the study period. Confirm date-specific amendments with supplier specifications before an executable-strategy claim. ENTSO-E's IDA page also publishes cancellation and decoupling notices: https://www.entsoe.eu/network_codes/cacm/implementation/ida/.
+
+Our decision at 14:30 is a deliberate 30-minute buffer, not the exchange deadline. `auction_timing` constructs it in Europe/Berlin before converting to UTC, including delivery days adjacent to clock changes. `check_information` rejects predictor publication or forecast issuance after the decision. A saved publication timestamp is needed; retrieval time is insufficient.
+
+**Finalised simulation v1:** one pre-delivery adjustment, original DA ledger immutable, original daily boundary SOC fixed, full joint acceptance assumed, continuous quantities, EUR1/MWh illustrative ID fee, base trade bound 2 MW equivalent per direction (0.5 MWh per quarter-hour). This is a research relaxation. Fees, available liquidity, actual order acceptance and date-specific operational exceptions remain unverified, not silently finalised as facts. No order submission is implemented.
+
+See [frozen evaluation plan](intraday-evaluation-plan.md) and `config/intraday_evaluation_v1.json` for fixed sensitivities, reporting and fallback policy.
+
+## Canonical data interface and validation
+
+Required CSV columns: `delivery_start`, `delivery_end` (offset-aware ISO8601), `zone` (= DE-LU), `auction` (= IDA1), `price_eur_mwh`, `status`. Allowed status: cleared, cancelled, missing, decoupled, unknown. Optional `volume_mwh` is nonnegative context, not accessible liquidity. Missing rows are counted; no rows or prices are fabricated. Unknown product/status conventions must be mapped explicitly in a supplier adapter.
+
+`python scripts/validate_intraday_data.py PRIVATE.csv --start 2025-01-09 --end 2025-09-30 --report PRIVATE-coverage.json`
+
+The report contains source SHA256, coverage and daily eligibility, not raw price data. It does not certify licensing or execution. Whole-day eligibility requires every expected interval to be cleared with a finite price. DST grids contain 92/96/100 quarter-hours; repeated local clock labels remain different UTC instants. Never silently localise naive autumn timestamps.
+
+`expand_da_quarterhours` checks original physics, allocates energy/fees and interpolates SOC, then reconciles original cashflows and quantities by source interval without modifying the source frame. `evaluate_adjustment` validates paired physics and accounting before producing incremental financial metrics.

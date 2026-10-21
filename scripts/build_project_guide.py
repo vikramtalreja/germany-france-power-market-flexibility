@@ -37,7 +37,7 @@ def para(s, style='BodyGuide'):
 def footer(c, doc):
     c.setFont('Helvetica',8)
     c.setFillColor(colors.HexColor('#52606D'))
-    c.drawString(42,27,'Vikram Talreja | Master project guide | 21 October 2026, revision 2')
+    c.drawString(42,27,'Vikram Talreja | Master project guide | 21 October 2026, revision 3')
     c.drawRightString(A4[0]-42,27,str(doc.page))
 
 story=[]

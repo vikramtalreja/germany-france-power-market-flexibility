@@ -13,7 +13,7 @@ The project connects three things: understanding power markets, predicting price
 3. Operational assumptions matter too. Removing a forced nightly 50% charge reset increased simulated margin, mainly through lower purchase and cycling costs.
 
 ### Read this guide in three passes
-First read chapters 1–6 for the market and battery concepts. Next read chapters 7–12 for the experiment and evidence. Finally read chapters 13–18 for intraday accounting, limitations, presentation practice and the glossary, then chapters 19–21 for the current roadmap and the auction-data execution plan.
+First read chapters 1–6 for the market and battery concepts. Next read chapters 7–12 for the experiment and evidence. Finally read chapters 13–18 for intraday accounting, limitations, presentation practice and the glossary, then chapters 19–22 for the current roadmap and the auction-data execution plan.
 
 ### Where the project stands
 Historical day-ahead analysis, forecast evaluation, ML diagnosis and continuous operation are completed. An incremental intraday optimisation and accounting engine is implemented and tested. Its current examples are synthetic: no historical intraday profitability result has been established. FCR/aFRR reserve optimisation is not implemented.
@@ -476,7 +476,7 @@ Begin with a transparent baseline such as the last available same-local-quarter 
 ### Step 6: Adjust, settle and compare
 Start with the committed DA schedule and its boundary SOC. Optimise incremental ID trades using the forecast, then settle those trades at actual ID clearing prices under the stated fill approximation. Validate revised SOC, power and energy balance. Compare combined margin with the unchanged DA-only reference. Report harmful as well as helpful adjustments.
 
-These steps are a documented implementation and evaluation plan. A historical importer, forecasting pipeline and backtest are not yet validated against a suitable supplier dataset.
+These steps are a documented implementation and evaluation plan. The canonical validator and DA quarter-hour adapter are now implemented and synthetically tested. A supplier-specific parser, forecasting pipeline and historical backtest still require suitable data.
 <!-- PAGE -->
 # 21. Execution assumptions and the evidence we will publish
 ### Decision timing and acceptance
@@ -502,3 +502,27 @@ Publish DA-only margin, combined margin and incremental margin; ID buy/sell cash
 The printable master lives in docs/printable/Power_Market_BESS_Project_Guide.pdf. Its editable source is docs/project-learning-guide.md. Every future project milestone must update the source, roadmap, development notes and status, then rebuild and visually inspect the PDF. Commit the source and PDF together. No unattended update process or data-acquisition job is implied.
 
 Before printing, open docs/printable/README.md and check the revision date. Future revisions keep the same PDF filename so bookmarks remain useful.
+
+<!-- PAGE -->
+# 22. Intraday preparation v1: implemented and frozen
+### What is now implemented
+The canonical validator checks explicit timezone offsets, quarter-hour durations, duplicate instants, market and auction identity, numeric prices and coverage. Negative prices remain valid. Cancelled, missing, decoupled or unknown intervals make the whole day ineligible for adjustment; no price is filled. The coverage report records the private input file hash without copying prices into public results.
+
+Tests cover 92-, 96- and 100-quarter-hour local days and reject ambiguous naive times. The DA adapter divides hourly energy and fees across four intervals, preserves price and constant power, interpolates SOC and reconciles each original trade. This is essential because 1 MW for 15 minutes is 0.25 MWh, not 1 MWh.
+
+The paired evaluator checks physical feasibility and accounting before reporting margin, losing days, worst daily adjustment, traded volume, fees and cycling changes. A complete historical forecasting and evaluation run remains pending. The preparation suite passes 39 tests in total, including the existing model tests.
+
+### Published facts versus our choices
+EPEX's February 2025 brochure, PDF page 7, specifies the IDA1 gate at 15:00 CET/CEST, German quarter-hour products and a 0.1 MW volume tick. It gives nominal results from 15:20. This does not establish that every historical auction completed on time or that every requested trade filled.
+
+Our simulation chooses a 14:30 decision, EUR1/MWh incremental trading fee and a 2 MW-equivalent adjustment cap per direction. The cap permits reversing a 1 MW position while physical battery power stays 1 MW. Full joint fills and continuous quantities remain idealisations. Actual fees, rule amendments and executable order acceptance remain open. Do not round schedules after optimisation: this can break physical feasibility.
+
+### Frozen comparison
+Version ida1-preparation-v1 fixes the 2025 retrospective dates, battery assumptions, previous-local-day same-quarter IDA1 forecast, fee and volume sensitivities, whole-day no-adjustment fallback and matched DA comparison. The reference day-ahead ledger is never repriced. Each daily adjustment keeps its original opening and closing SOC, so later DA commitments remain feasible.
+
+A lower net margin is a valid result. Report negative outcomes and coverage, not only profitable days. Changes to the protocol require a new version and a statement of what results were already inspected. Later untouched tests require dates to be locked before looking at their price outcomes.
+
+### Files to use
+Execution: docs/intraday-data-and-execution.md. Frozen plan: docs/intraday-evaluation-plan.md. Parameters: config/intraday_evaluation_v1.json. Validation and accounting helpers: src/market_flex/intraday_data.py. Command-line validation: scripts/validate_intraday_data.py. Tests: tests/test_intraday_data.py.
+
+Source: EPEX SPOT Trading Brochure, February 2025, pan-European Intraday Auctions section. The full source URL is recorded in the execution specification. Historical intraday profits and reserve optimisation remain unimplemented.

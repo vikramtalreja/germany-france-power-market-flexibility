@@ -116,3 +116,5 @@ An educational PTDF/RAM network example and additional causal market investigati
 ## Current print and intraday checkpoint
 
 Day-ahead benchmark, forecast/ML diagnosis and continuous operation are complete. Intraday synthetic engine is tested; suitable historical data and historical execution validation remain prerequisites. Energy plus reserves follows that stage. See [master guide](project-learning-guide.md), chapters 19–21. The uncertainty-aware forecast experiment remains optional.
+
+Preparation v1 is implemented: canonical IDA1 schema validation, DST handling, DA alignment and paired metrics. The evaluation protocol is frozen in docs/intraday-evaluation-plan.md and config/intraday_evaluation_v1.json. Full historical forecasting/backtest and supplier-specific validation remain pending. The printable guide is revision 3.

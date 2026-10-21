@@ -144,4 +144,4 @@ Read the [complete learning and presentation guide](docs/project-learning-guide.
 
 ## Printable master guide
 
-Open [docs/printable](docs/printable/README.md) and download **Power_Market_BESS_Project_Guide.pdf**. The guide explains the whole project, historical findings, concepts, synthetic intraday accounting and the plan for auction data. Current revision: 21 October 2026, revision 2.
+Open [docs/printable](docs/printable/README.md) and download **Power_Market_BESS_Project_Guide.pdf**. The guide explains the whole project, historical findings, concepts, synthetic intraday accounting and the plan for auction data. Current revision: 21 October 2026, revision 3.

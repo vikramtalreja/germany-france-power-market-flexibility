@@ -3,8 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'src/market_flex/intraday.py'
-      - 'tests/test_intraday.py'
+      - 'src/market_flex/intraday*.py'
+      - 'config/intraday_evaluation_v1.json'
+      - 'tests/test_intraday*.py'
       - 'scripts/demo_intraday.py'
       - '.github/workflows/intraday-tests.yml'
 jobs:

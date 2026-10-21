@@ -1,6 +1,6 @@
 # Printable master guide
 
-Revision: **21 October 2026, revision 2**.
+Revision: **21 October 2026, revision 3**.
 
 Download [Power_Market_BESS_Project_Guide.pdf](Power_Market_BESS_Project_Guide.pdf). Open the PDF on GitHub and click **Download raw file**. Print A4, preferably double-sided.
 

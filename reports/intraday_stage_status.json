@@ -1,10 +1,14 @@
 {
   "engine": "implemented",
-  "tests": "28 passed",
+  "tests": "39 passed",
   "historical_backtest": "not_run",
   "reason": "No verified usable historical intraday dataset and publication/execution metadata acquired",
   "demonstration": "synthetic, not historical",
   "zone_target": "DE-LU",
   "venue_target": "IDA1 auction, not continuous SIDC",
-  "checked_on": "2026-10-21"
+  "checked_on": "2026-10-21",
+  "preparation": "canonical validation, DA allocation, matched metrics implemented",
+  "evaluation_protocol": "ida1-preparation-v1",
+  "execution": "research simulation specified; actual fees and fill feasibility unverified",
+  "guide_revision": 3
 }
