@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "status": "frozen_before_execution",
+  "evaluation": {
+    "start": "2025-01-09",
+    "end": "2025-09-30",
+    "previously_inspected": true
+  },
+  "zones": [
+    "DE-LU",
+    "FR"
+  ],
+  "decision_cutoff": "D-1 09:00 Europe/Berlin",
+  "forecast": "seven-day same-hour mean using complete D-8..D-2 delivery days, fixed at issuance for both planning days",
+  "horizon_local_days": 2,
+  "commit_local_days": 1,
+  "initial_soc_mwh": 1,
+  "final_soc_mwh": 1,
+  "battery": {
+    "power_mw": 1,
+    "energy_mwh": 2,
+    "round_trip_efficiency": 0.9,
+    "degradation_eur_per_mwh_discharged": 10
+  },
+  "scenarios": [
+    {
+      "name": "continuous",
+      "terminal_fraction": 0.5,
+      "fee_eur_per_mwh_each_side": 0
+    },
+    {
+      "name": "fee_1",
+      "terminal_fraction": 0.5,
+      "fee_eur_per_mwh_each_side": 1
+    },
+    {
+      "name": "terminal_0",
+      "terminal_fraction": 0,
+      "fee_eur_per_mwh_each_side": 0
+    },
+    {
+      "name": "terminal_1",
+      "terminal_fraction": 1,
+      "fee_eur_per_mwh_each_side": 0
+    }
+  ],
+  "oracle": "full evaluation horizon, perfect foresight, same physical constraints and initial/final SOC; solved separately at fees 0 and 1",
+  "solver": {
+    "mip_rel_gap": 1e-8,
+    "time_limit_seconds": 180
+  },
+  "allow_reselection": false
+}
