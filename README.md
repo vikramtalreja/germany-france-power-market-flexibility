@@ -141,7 +141,3 @@ Reproduce with `python scripts/analyse_continuous.py` using the recovered inputs
 Run `python scripts/demo_intraday.py` or the **Intraday accounting tests** GitHub Actions workflow. Historical DE-LU IDA1 evaluation awaits a verified usable dataset, publication information and execution specification. No actual intraday prices have been invented or replaced with day-ahead data.
 
 Read the [complete learning and presentation guide](docs/project-learning-guide.md): beginner market concepts, battery equations, forecast evaluation, findings, intraday ledger examples, glossary and a five-minute presentation script. Printable Word/PDF versions are delivered separately; this Markdown source stays with the project.
-
-## Printable master guide
-
-Open [docs/printable](docs/printable/README.md) and download **Power_Market_BESS_Project_Guide.pdf**. The guide explains the whole project, historical findings, concepts, synthetic intraday accounting and the plan for auction data. Current revision: 21 October 2026, revision 3.
