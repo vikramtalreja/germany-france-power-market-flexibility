@@ -131,7 +131,7 @@ Gross simulated margin is the sum of actual price multiplied by net discharged e
 - Evaluated whether lower forecast error translated into better financial decisions by feeding each forecast into a battery optimiser and evaluating dispatch against actual day-ahead prices.
 - Analysed high-price and negative-price periods using demand, renewable generation, residual load and cross-border spreads to investigate price movements and flexibility value.
 
-## Interview wording — use only after completion
+## Technical summary — use only after completion
 
 > I wanted to test a practical question relevant for trading and flexibility teams: does a better forecast actually lead to a better financial decision? I compared simple and machine-learning price forecasts, used each forecast to optimise a battery schedule, and evaluated the simulated realised return against actual prices. This helped me look beyond MAE and focus on financial outcomes, especially during price spikes and negative-price periods.
 

@@ -257,7 +257,7 @@ endobj
 endobj
 29 0 obj
 <<
-/Author (Vikram Talreja) /CreationDate (D:20261021235419+02'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261021235419+02'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author (Vikram Talreja) /CreationDate (D:20261027094538+01'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20261027094538+01'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title (From power prices to battery decisions) /Trapped /False
 >>
 endobj
@@ -270,39 +270,39 @@ endobj
 endobj
 31 0 obj
 <<
-/Length 3738
+/Length 3605
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (1) Tj T* ET
 q
 1 0 0 1 48 768.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 25 Tf 29 TL 16.2378 0 Td (From power prices to battery decisions) Tj T* -16.2378 0 Td ET
 Q
 Q
 q
 1 0 0 1 48 738.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (A practical learning and presentation guide) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Methods, results and technical reference) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 719.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Vikram Talreja | Germany-France power-market and BESS project | 21 October 2026) Tj T* ET
+BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Vikram Talreja | Germany-France power-market and BESS project | 27 October 2026) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 693.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The question behind the project) Tj T* ET
 Q
 Q
@@ -323,7 +323,7 @@ Q
 q
 1 0 0 1 48 602.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The three findings to remember) Tj T* ET
 Q
 Q
@@ -351,7 +351,7 @@ Q
 q
 1 0 0 1 48 478.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Read this guide in three passes) Tj T* ET
 Q
 Q
@@ -359,13 +359,13 @@ q
 1 0 0 1 48 433.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (First read chapters 1-6 for the market and battery concepts. Next read chapters 7-12 for the experiment and) Tj T* (evidence. Finally read chapters 13-18 for intraday accounting, limitations, presentation practice and the glossary,) Tj T* (then chapters 19-22 for the current roadmap and the auction-data execution plan.) Tj T* ET
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (First read chapters 1-6 for the market and battery concepts. Next read chapters 7-12 for the experiment and) Tj T* (evidence. Finally read chapters 13-18 for intraday accounting, limitations, technical summary and the glossary,) Tj T* (then chapters 19-22 for the current roadmap and the auction-data execution plan.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 407.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Where the project stands) Tj T* ET
 Q
 Q
@@ -388,25 +388,25 @@ endstream
 endobj
 32 0 obj
 <<
-/Length 3712
+/Length 3539
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (2) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (1. The real problem and the project's purpose) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Start with a familiar analogy) Tj T* ET
 Q
 Q
@@ -427,28 +427,28 @@ Q
 q
 1 0 0 1 48 605.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why this follows from your thesis) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Connection to prior research) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 547.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (Your thesis coordinated building load, PV and EV charging using forecasts, uncertainty scenarios and) Tj T* (receding-horizon optimisation. Its economic question concerned electricity-import costs and flexible charging.) Tj T* (This portfolio moves the same decision-focused thinking into separate German and French market-price case) Tj T* (studies.) Tj T* ET
+BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (Prior thesis research coordinated building load, PV and EV charging using forecasts, uncertainty scenarios and) Tj T* (receding-horizon optimisation. Its economic question concerned electricity-import costs and flexible charging.) Tj T* (This portfolio moves the same decision-focused thinking into separate German and French market-price case) Tj T* (studies.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 488.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (The connection is methodological: forecast information changes an optimisation decision, and the decision is) Tj T* (evaluated economically. The public project does not reproduce your confidential thesis code or data. Its current) Tj T* (market controller is deterministic: it uses one forecast trajectory. It does not yet implement the thesis's two-stage) Tj T* (stochastic controller.) Tj T* ET
+BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (The connection is methodological: forecast information changes an optimisation decision, and the decision is) Tj T* -0.137627 Tw (evaluated economically. The public project does not reproduce confidential thesis code or data. Its current market) Tj T* 0 Tw (controller is deterministic: it uses one forecast trajectory. It does not yet implement the thesis's two-stage) Tj T* (stochastic controller.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 462.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The industry relevance) Tj T* ET
 Q
 Q
@@ -456,28 +456,28 @@ q
 1 0 0 1 48 417.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (A forecasting analyst can improve a prediction. An optimisation analyst translates it into dispatch. A trader or) Tj T* (portfolio manager asks whether the position is feasible, executable and financially useful. This project lets you) Tj T* (explain how those responsibilities connect.) Tj T* ET
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (A forecasting analyst can improve a prediction. An optimisation analyst translates it into dispatch. A trader or) Tj T* (portfolio manager asks whether the position is feasible, executable and financially useful. This project connects) Tj T* (forecasting, constrained dispatch and economic evaluation.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 391.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (A clear statement of your contribution) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Project scope) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 346.8898 cm
+1 0 0 1 48 359.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL ("I built a reproducible workflow that turns price forecasts into battery schedules and evaluates the financial) Tj T* (consequences. I then examined why models earned different margins and whether operational assumptions) Tj T* (were distorting the result.") Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (The workflow turns price forecasts into battery schedules and evaluates their financial consequences. The) Tj T* (analysis decomposes margin differences and tests the effect of operating assumptions.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 313.8898 cm
+1 0 0 1 48 326.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Do not claim a live trading strategy or experience running a real desk. Your demonstrated contribution is) Tj T* (modelling, data handling, evaluation and diagnosis.) Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (The scope covers modelling, data handling, evaluation and diagnosis. It does not establish live trading) Tj T* (performance or operational deployment.) Tj T* ET
 Q
 Q
  
@@ -485,25 +485,25 @@ endstream
 endobj
 33 0 obj
 <<
-/Length 4905
+/Length 4767
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (3) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (2. Electricity markets without assumed background) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why electricity has delivery times) Tj T* ET
 Q
 Q
@@ -524,14 +524,14 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Three distinct stages) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 515.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 110 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -622,7 +622,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 110 m 511.2756 110 l S
 n 0 0 m 511.2756 0 l S
@@ -649,7 +649,7 @@ Q
 q
 1 0 0 1 48 441.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (A financial position is not a physical action) Tj T* ET
 Q
 Q
@@ -663,7 +663,7 @@ Q
 q
 1 0 0 1 48 370.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Timing language) Tj T* ET
 Q
 Q
@@ -686,25 +686,25 @@ endstream
 endobj
 34 0 obj
 <<
-/Length 3828
+/Length 3711
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (4) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (3. Why prices rise, fall or become negative) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Merit order: a useful starting point) Tj T* ET
 Q
 Q
@@ -725,7 +725,7 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why would a seller accept a negative price?) Tj T* ET
 Q
 Q
@@ -746,7 +746,7 @@ Q
 q
 1 0 0 1 48 501.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Scarcity and congestion) Tj T* ET
 Q
 Q
@@ -767,15 +767,15 @@ Q
 q
 1 0 0 1 48 358.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The right interview language) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Interpretation of observational evidence) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 326.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL ("Our observations are consistent with a mechanism" is defensible when you have prices and fundamentals. "We) Tj T* (proved the mechanism caused the price" requires much stronger evidence.) Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Prices and fundamentals can support an interpretation consistent with an economic mechanism. Establishing) Tj T* (causality requires stronger identification evidence.) Tj T* ET
 Q
 Q
  
@@ -783,32 +783,32 @@ endstream
 endobj
 35 0 obj
 <<
-/Length 5011
+/Length 4873
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (5) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (4. Germany and France: what our data actually shows) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Whole-year price observations: 2024) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 642.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 100 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -920,7 +920,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 100 m 511.2756 100 l S
 n 0 0 m 511.2756 0 l S
@@ -948,7 +948,7 @@ Q
 q
 1 0 0 1 48 568.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Residual load: define it before comparing it) Tj T* ET
 Q
 Q
@@ -969,7 +969,7 @@ Q
 q
 1 0 0 1 48 464.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why French residual load needs care) Tj T* ET
 Q
 Q
@@ -990,7 +990,7 @@ Q
 q
 1 0 0 1 48 334.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (How to say it simply) Tj T* ET
 Q
 Q
@@ -1013,25 +1013,25 @@ endstream
 endobj
 36 0 obj
 <<
-/Length 4907
+/Length 4769
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (6) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (5. One event: Germany's December price spike) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The observation) Tj T* ET
 Q
 Q
@@ -1045,7 +1045,7 @@ Q
 q
 1 0 0 1 48 609.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 100 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1157,7 +1157,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 100 m 511.2756 100 l S
 n 0 0 m 511.2756 0 l S
@@ -1185,7 +1185,7 @@ Q
 q
 1 0 0 1 48 535.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What the comparison improves) Tj T* ET
 Q
 Q
@@ -1199,7 +1199,7 @@ Q
 q
 1 0 0 1 48 464.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What we cannot conclude) Tj T* ET
 Q
 Q
@@ -1213,7 +1213,7 @@ Q
 q
 1 0 0 1 48 393.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why this motivated the battery study) Tj T* ET
 Q
 Q
@@ -1243,25 +1243,25 @@ endstream
 endobj
 37 0 obj
 <<
-/Length 3300
+/Length 3192
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (7) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (6. Battery physics and the money calculation) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Power, energy and state of charge) Tj T* ET
 Q
 Q
@@ -1282,7 +1282,7 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The energy balance) Tj T* ET
 Q
 Q
@@ -1303,7 +1303,7 @@ Q
 q
 1 0 0 1 48 527.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (A worked cycle) Tj T* ET
 Q
 Q
@@ -1324,7 +1324,7 @@ Q
 q
 1 0 0 1 48 423.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What the cycling charge means) Tj T* ET
 Q
 Q
@@ -1340,25 +1340,25 @@ endstream
 endobj
 38 0 obj
 <<
-/Length 3719
+/Length 3611
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (8) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (7. Optimisation, forecasts and perfect foresight) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What an optimiser does) Tj T* ET
 Q
 Q
@@ -1379,7 +1379,7 @@ Q
 q
 1 0 0 1 48 618.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why start with perfect foresight?) Tj T* ET
 Q
 Q
@@ -1400,7 +1400,7 @@ Q
 q
 1 0 0 1 48 501.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Initial and terminal SOC) Tj T* ET
 Q
 Q
@@ -1421,7 +1421,7 @@ Q
 q
 1 0 0 1 48 397.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Forecast then settle) Tj T* ET
 Q
 Q
@@ -1444,25 +1444,25 @@ endstream
 endobj
 39 0 obj
 <<
-/Length 3571
+/Length 3463
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 548.8276 27 Tm (9) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (8. Fair forecasting experiments) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Simple baselines before machine learning) Tj T* ET
 Q
 Q
@@ -1483,7 +1483,7 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Features and leakage) Tj T* ET
 Q
 Q
@@ -1504,7 +1504,7 @@ Q
 q
 1 0 0 1 48 514.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Chronological evaluation) Tj T* ET
 Q
 Q
@@ -1518,7 +1518,7 @@ Q
 q
 1 0 0 1 48 430.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Reproducibility) Tj T* ET
 Q
 Q
@@ -1541,25 +1541,25 @@ endstream
 endobj
 40 0 obj
 <<
-/Length 4784
+/Length 4646
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (10) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (9. Accuracy and financial value are different scores) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What the metrics measure) Tj T* ET
 Q
 Q
@@ -1580,14 +1580,14 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Fixed 2025 comparison: 9 January-30 September) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 525.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 100 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1699,7 +1699,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 100 m 511.2756 100 l S
 n 0 0 m 511.2756 0 l S
@@ -1727,7 +1727,7 @@ Q
 q
 1 0 0 1 48 451.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What this does and does not establish) Tj T* ET
 Q
 Q
@@ -1741,7 +1741,7 @@ Q
 q
 1 0 0 1 48 380.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Explain it to a nontechnical listener) Tj T* ET
 Q
 Q
@@ -1764,25 +1764,25 @@ endstream
 endobj
 41 0 obj
 <<
-/Length 5081
+/Length 4961
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (11) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (10. Diagnose the money, then inspect the actions) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Start with an identity) Tj T* ET
 Q
 Q
@@ -1803,14 +1803,14 @@ Q
 q
 1 0 0 1 48 670.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Random Forest minus seven-day mean, 2025) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 564.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 100 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1922,7 +1922,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 100 m 511.2756 100 l S
 n 0 0 m 511.2756 0 l S
@@ -1950,7 +1950,7 @@ Q
 q
 1 0 0 1 48 490.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Three concrete cases) Tj T* ET
 Q
 Q
@@ -1994,25 +1994,25 @@ endstream
 endobj
 42 0 obj
 <<
-/Length 4519
+/Length 4399
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (12) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (11. Continuous operation: tomorrow inherits today) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The artificial daily reset) Tj T* ET
 Q
 Q
@@ -2033,7 +2033,7 @@ Q
 q
 1 0 0 1 48 644.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why current SOC is not tomorrow's opening SOC) Tj T* ET
 Q
 Q
@@ -2047,14 +2047,14 @@ Q
 q
 1 0 0 1 48 573.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Retrospective 2025 comparison) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 507.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 60 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -2145,7 +2145,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 60 m 511.2756 60 l S
 n 0 0 m 511.2756 0 l S
@@ -2195,25 +2195,25 @@ endstream
 endobj
 43 0 obj
 <<
-/Length 3520
+/Length 3365
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (13) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (12. Sensitivity, uncertainty and model boundaries) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Sensitivity analysis asks "what if?") Tj T* ET
 Q
 Q
@@ -2234,7 +2234,7 @@ Q
 q
 1 0 0 1 48 631.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What a perfect-foresight gap means) Tj T* ET
 Q
 Q
@@ -2248,7 +2248,7 @@ Q
 q
 1 0 0 1 48 560.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Link back to stochastic optimisation) Tj T* ET
 Q
 Q
@@ -2263,21 +2263,21 @@ q
 1 0 0 1 48 443.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 55 Tm /F1 10 Tf 13 TL (VSS, the Value of the Stochastic Solution, compares stochastic optimisation with a consistently evaluated) Tj T* (expected-value decision. EVPI, the Expected Value of Perfect Information, measures the benefit of knowing) Tj T* -0.028886 Tw (uncertainty in advance under matched assumptions. These ideas belong to your thesis methodology. The market) Tj T* 0 Tw (project's oracle gap should not automatically be called VSS or formal EVPI: it is not the same stochastic) Tj T* (experiment.) Tj T* ET
+BT 1 0 0 1 0 55 Tm /F1 10 Tf 13 TL (VSS, the Value of the Stochastic Solution, compares stochastic optimisation with a consistently evaluated) Tj T* (expected-value decision. EVPI, the Expected Value of Perfect Information, measures the benefit of knowing) Tj T* (uncertainty in advance under matched assumptions. These measures belong to stochastic optimisation) Tj T* -0.035245 Tw (methodology. The market project's oracle gap should not automatically be called VSS or formal EVPI: it is not the) Tj T* 0 Tw (same stochastic experiment.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 417.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (A question worth asking in an interview) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Decision-relevant uncertainty) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 372.8898 cm
+1 0 0 1 48 385.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL ("Which uncertainties matter most to this asset's decisions, and how do you evaluate their economic impact?") Tj T* (That connects forecasting, optimisation and model validation without claiming a tool alone solves the business) Tj T* (problem.) Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (The relevant question is which uncertainties change the asset's decisions and how their economic impact can be) Tj T* (evaluated. This connects forecasting, optimisation and model validation.) Tj T* ET
 Q
 Q
  
@@ -2285,25 +2285,25 @@ endstream
 endobj
 44 0 obj
 <<
-/Length 3545
+/Length 3437
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (14) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (13. Intraday: adjust a trade, do not erase it) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (The key bookkeeping rule) Tj T* ET
 Q
 Q
@@ -2338,7 +2338,7 @@ Q
 q
 1 0 0 1 48 630.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (One-interval example) Tj T* ET
 Q
 Q
@@ -2359,7 +2359,7 @@ Q
 q
 1 0 0 1 48 526.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Reversal needs more traded volume than physical power) Tj T* ET
 Q
 Q
@@ -2373,7 +2373,7 @@ Q
 q
 1 0 0 1 48 455.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What the new engine implements) Tj T* ET
 Q
 Q
@@ -2396,25 +2396,25 @@ endstream
 endobj
 45 0 obj
 <<
-/Length 6142
+/Length 5992
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (15) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (14. A synthetic intraday lesson you can calculate) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (14. Worked synthetic intraday example) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (These prices are invented, not historical results) Tj T* ET
 Q
 Q
@@ -2428,7 +2428,7 @@ Q
 q
 1 0 0 1 48 586.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 110 511.2756 -30 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -2645,7 +2645,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 110 m 511.2756 110 l S
 n 0 0 m 511.2756 0 l S
@@ -2676,7 +2676,7 @@ Q
 q
 1 0 0 1 48 525.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Outcome A: forecast materialises) Tj T* ET
 Q
 Q
@@ -2690,7 +2690,7 @@ Q
 q
 1 0 0 1 48 467.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Outcome B: forecast is wrong) Tj T* ET
 Q
 Q
@@ -2704,7 +2704,7 @@ Q
 q
 1 0 0 1 48 409.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What this demonstrates) Tj T* ET
 Q
 Q
@@ -2734,25 +2734,25 @@ endstream
 endobj
 46 0 obj
 <<
-/Length 3778
+/Length 3670
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (16) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (15. Data discipline and the remaining industry gap) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Data problems can masquerade as strategy profits) Tj T* ET
 Q
 Q
@@ -2773,7 +2773,7 @@ Q
 q
 1 0 0 1 48 618.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Why intraday data needs extra care) Tj T* ET
 Q
 Q
@@ -2794,7 +2794,7 @@ Q
 q
 1 0 0 1 48 488.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What is close to industry practice) Tj T* ET
 Q
 Q
@@ -2808,7 +2808,7 @@ Q
 q
 1 0 0 1 48 417.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What remains absent) Tj T* ET
 Q
 Q
@@ -2831,110 +2831,103 @@ endstream
 endobj
 47 0 obj
 <<
-/Length 3970
+/Length 3169
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (17) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (16. Explain the project in five minutes) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (16. Technical summary) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Minute 1: problem and motivation) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Problem and motivation) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 703.8898 cm
+1 0 0 1 48 716.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL ("Batteries can shift electricity between cheap and expensive periods, but they have limited power, capacity and) Tj T* (efficiency. My question was whether a better price forecast actually produces a better financial decision. This) Tj T* (follows from my thesis work on forecasting-aware EV/PV flexibility.") Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Batteries shift electricity between low- and high-price intervals subject to power, capacity and efficiency limits.) Tj T* (The research question is whether a more accurate price forecast produces a better financial decision.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 677.8898 cm
-q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Minute 2: market context and method) Tj T* ET
-Q
-Q
-q
-1 0 0 1 48 632.8898 cm
+1 0 0 1 48 690.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL ("I compared Germany-Luxembourg and France, studied negative prices and a December spike, then modelled a) Tj T* (separate 1 MW / 2 MWh battery in each market. I first established a perfect-foresight benchmark, then used) Tj T* (forecasts to choose schedules and actual prices only to value those fixed schedules.") Tj T* ET
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Market context and method) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 606.8898 cm
+1 0 0 1 48 645.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Minute 3: strongest forecasting result) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (Germany-Luxembourg and France are separate case studies, with a 1 MW / 2 MWh battery in each market.) Tj T* (Perfect foresight provides an upper benchmark. Forecasts determine schedules; actual prices value those fixed) Tj T* (schedules.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48 619.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Forecast evaluation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 48 574.8898 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (In the fixed 2025 comparison, Random Forest had lower average error than the seven-day forecast but earned) Tj T* (less in both markets. Sales, purchases and cycling costs explain the margin gap. Selected hourly cases show) Tj T* (flattened spreads and insufficient charging headroom, alongside cases where Random Forest performed better.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 548.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL ("In the fixed 2025 comparison, Random Forest had lower average error than the seven-day forecast but earned) Tj T* (less in both markets. I decomposed the gap into sales, purchases and cycling costs and inspected forecasts,) Tj T* (dispatch and state of charge on selected days. Some forecasts flattened valuable spreads or left too little) Tj T* (charging headroom.") Tj T* ET
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Operating assumptions) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 522.8898 cm
+1 0 0 1 48 503.8898 cm
 q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Minute 4: operational modelling result) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (Removing the daily 50% charge reset and preserving commitments across days increased simulated margin by) Tj T* (about 8% in Germany and 19% in France, mainly through lower purchase and cycling costs. These findings are) Tj T* (specific to the stated model and evaluation periods.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 477.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL ("I then removed an artificial daily 50% charge reset and preserved commitments across days. Simulated margin) Tj T* (increased by about 8% in Germany and 19% in France, mostly through lower purchase and cycling costs. This) Tj T* (showed that operational assumptions can be as important as model complexity.") Tj T* ET
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Intraday extension) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 451.8898 cm
-q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Minute 5: intraday and honest boundaries) Tj T* ET
-Q
-Q
-q
-1 0 0 1 48 393.8898 cm
+1 0 0 1 48 432.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL ("I have implemented a tested incremental intraday engine that keeps original day-ahead trades intact and adds) Tj T* (new trades. Its current examples are synthetic while historical data and execution assumptions are verified. I) Tj T* (would next test one defined auction opportunity with credible information timing, rather than infer executable) Tj T* (returns from a final price index.") Tj T* ET
+BT 1 0 0 1 0 29 Tm /F1 10 Tf 13 TL (The incremental intraday engine preserves original day-ahead trades and adds new trades. Current examples) Tj T* (are synthetic. Historical evaluation requires auction data with credible information timing and a defined execution) Tj T* (opportunity.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 367.8898 cm
-q
-.090196 .219608 .290196 rg
-BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Questions you should be ready for) Tj T* ET
-Q
-Q
-q
-1 0 0 1 48 309.8898 cm
+1 0 0 1 48 406.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (Why not optimise on actual prices? That is the oracle, not a forecast strategy. Why did ML lose? Explain the) Tj T* (observed dispatch mechanisms without claiming ML always loses. Are these profits? They are simulated) Tj T* (operating margins with exclusions. Can this trade live? No: execution, risk, data and operational systems are) Tj T* (missing.) Tj T* ET
+BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Interpretation limits) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48 289.8898 cm
+1 0 0 1 48 348.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1 10 Tf 13 TL (Use the result appropriate to the experiment. Do not mix whole-year 2024, late-2024 ML and partial-2025 totals.) Tj T* ET
+BT 1 0 0 1 0 42 Tm /F1 10 Tf 13 TL (Perfect foresight is an oracle benchmark, not a forecast strategy. The economic metric is simulated operating) Tj T* (margin with stated exclusions. Live execution, risk management and operational deployment are outside scope.) Tj T* (Whole-year 2024, late-2024 ML and partial-2025 results refer to different experiments and should not be) Tj T* (combined.) Tj T* ET
 Q
 Q
  
@@ -2942,25 +2935,25 @@ endstream
 endobj
 48 0 obj
 <<
-/Length 6693
+/Length 6609
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (18) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (17. Glossary and practice questions) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 418.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 350 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -3204,7 +3197,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 350 m 511.2756 350 l S
 n 0 0 m 511.2756 0 l S
@@ -3243,7 +3236,7 @@ Q
 q
 1 0 0 1 48 357.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Practise without looking at earlier pages) Tj T* ET
 Q
 Q
@@ -3294,25 +3287,25 @@ endstream
 endobj
 49 0 obj
 <<
-/Length 6083
+/Length 5914
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (19) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (18. Evidence map and how to keep learning) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Repository: the source of project results [R1]) Tj T* ET
 Q
 Q
@@ -3326,7 +3319,7 @@ Q
 q
 1 0 0 1 48 492.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 230 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -3487,7 +3480,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 230 m 511.2756 230 l S
 n 0 0 m 511.2756 0 l S
@@ -3514,13 +3507,13 @@ q
 1 0 0 1 48 457.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Earlier reports retain their historical "next step" wording. The current README and roadmap indicate the latest) Tj T* (completed stage. This guide describes the state on 21 October 2026.) Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Earlier reports retain their historical "next step" wording. The current README and roadmap indicate the latest) Tj T* (completed stage. This guide describes the state on 27 October 2026.) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 431.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Primary external references checked for this extension) Tj T* ET
 Q
 Q
@@ -3562,7 +3555,7 @@ Q
 q
 1 0 0 1 48 293.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (A practical learning routine) Tj T* ET
 Q
 Q
@@ -3577,7 +3570,7 @@ q
 1 0 0 1 48 202.8898 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (Your strongest story is not "I used many tools." It is "I traced a prediction through a constrained decision into a) Tj T* (financial outcome, checked the accounting, and investigated why the result occurred.") Tj T* ET
+BT 1 0 0 1 0 16 Tm /F1 10 Tf 13 TL (The analysis traces a prediction through a constrained decision into a financial outcome, checks the accounting) Tj T* (and investigates the resulting dispatch.) Tj T* ET
 Q
 Q
  
@@ -3585,32 +3578,32 @@ endstream
 endobj
 50 0 obj
 <<
-/Length 5371
+/Length 5233
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (20) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (19. Agreed roadmap and the data we have checked) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Keep the project sequence coherent) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 612.8898 cm
 q
-.898039 .933333 .94902 rg
+1 1 1 rg
 n 0 130 511.2756 -20 re f*
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -3743,7 +3736,7 @@ Q
 q
 1 J
 1 j
-.8 .839216 .866667 RG
+0 0 0 RG
 .3 w
 n 0 130 m 511.2756 130 l S
 n 0 0 m 511.2756 0 l S
@@ -3772,7 +3765,7 @@ Q
 q
 1 0 0 1 48 538.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What the sample files actually establish) Tj T* ET
 Q
 Q
@@ -3793,7 +3786,7 @@ Q
 q
 1 0 0 1 48 421.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Data request sent) Tj T* ET
 Q
 Q
@@ -3807,7 +3800,7 @@ Q
 q
 1 0 0 1 48 337.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What remains uncertain) Tj T* ET
 Q
 Q
@@ -3823,25 +3816,25 @@ endstream
 endobj
 51 0 obj
 <<
-/Length 4464
+/Length 4320
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (21) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (20. What we will do when auction data arrives) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 1: Accept and document the source) Tj T* ET
 Q
 Q
@@ -3855,7 +3848,7 @@ Q
 q
 1 0 0 1 48 677.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 2: Validate delivery intervals) Tj T* ET
 Q
 Q
@@ -3869,7 +3862,7 @@ Q
 q
 1 0 0 1 48 593.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 3: Align the accepted day-ahead position) Tj T* ET
 Q
 Q
@@ -3883,7 +3876,7 @@ Q
 q
 1 0 0 1 48 509.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 4: Freeze the experiment before fitting) Tj T* ET
 Q
 Q
@@ -3897,7 +3890,7 @@ Q
 q
 1 0 0 1 48 425.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 5: Forecast before clearing) Tj T* ET
 Q
 Q
@@ -3911,7 +3904,7 @@ Q
 q
 1 0 0 1 48 341.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Step 6: Adjust, settle and compare) Tj T* ET
 Q
 Q
@@ -3934,25 +3927,25 @@ endstream
 endobj
 52 0 obj
 <<
-/Length 4919
+/Length 4793
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (22) Tj T* ET
 q
 1 0 0 1 48 751.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 27 Tm /F2 19 Tf 23 TL (21. Execution assumptions and the evidence we will) Tj T* (publish) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 725.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Decision timing and acceptance) Tj T* ET
 Q
 Q
@@ -3972,7 +3965,7 @@ Q
 q
 1 0 0 1 48 595.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Quantity limits and costs) Tj T* ET
 Q
 Q
@@ -3986,7 +3979,7 @@ Q
 q
 1 0 0 1 48 511.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Acceptance checks before reporting historical margin) Tj T* ET
 Q
 Q
@@ -4035,7 +4028,7 @@ Q
 q
 1 0 0 1 48 366.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Result table and diagnostics) Tj T* ET
 Q
 Q
@@ -4049,7 +4042,7 @@ Q
 q
 1 0 0 1 48 269.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (How the master guide stays current) Tj T* ET
 Q
 Q
@@ -4072,25 +4065,25 @@ endstream
 endobj
 53 0 obj
 <<
-/Length 4817
+/Length 4709
 >>
 stream
 1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
 BT /F1 8 Tf 9.6 TL ET
-.321569 .376471 .427451 rg
-BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 21 October 2026, revision 3) Tj T* ET
+0 0 0 rg
+BT 1 0 0 1 42 27 Tm (Vikram Talreja | Master project guide | 27 October 2026, revision 4) Tj T* ET
 BT 1 0 0 1 544.3796 27 Tm (23) Tj T* ET
 q
 1 0 0 1 48 774.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 4 Tm /F2 19 Tf 23 TL (22. Intraday preparation v1: implemented and frozen) Tj T* ET
 Q
 Q
 q
 1 0 0 1 48 748.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (What is now implemented) Tj T* ET
 Q
 Q
@@ -4118,7 +4111,7 @@ Q
 q
 1 0 0 1 48 572.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Published facts versus our choices) Tj T* ET
 Q
 Q
@@ -4139,7 +4132,7 @@ Q
 q
 1 0 0 1 48 442.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Frozen comparison) Tj T* ET
 Q
 Q
@@ -4160,7 +4153,7 @@ Q
 q
 1 0 0 1 48 312.8898 cm
 q
-.090196 .219608 .290196 rg
+0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F3 11 Tf 14 TL (Files to use) Tj T* ET
 Q
 Q
@@ -4215,32 +4208,32 @@ xref
 0000005253 00000 n 
 0000005560 00000 n 
 0000005777 00000 n 
-0000009567 00000 n 
-0000013331 00000 n 
-0000018288 00000 n 
-0000022168 00000 n 
-0000027231 00000 n 
-0000032190 00000 n 
-0000035542 00000 n 
-0000039313 00000 n 
-0000042936 00000 n 
-0000047772 00000 n 
-0000052905 00000 n 
-0000057476 00000 n 
-0000061048 00000 n 
-0000064645 00000 n 
-0000070839 00000 n 
-0000074669 00000 n 
-0000078691 00000 n 
-0000085436 00000 n 
-0000091571 00000 n 
-0000096994 00000 n 
-0000101510 00000 n 
-0000106481 00000 n 
+0000009434 00000 n 
+0000013025 00000 n 
+0000017844 00000 n 
+0000021607 00000 n 
+0000026532 00000 n 
+0000031353 00000 n 
+0000034597 00000 n 
+0000038260 00000 n 
+0000041775 00000 n 
+0000046473 00000 n 
+0000051486 00000 n 
+0000055937 00000 n 
+0000059354 00000 n 
+0000062843 00000 n 
+0000068887 00000 n 
+0000072609 00000 n 
+0000075830 00000 n 
+0000082491 00000 n 
+0000088457 00000 n 
+0000093742 00000 n 
+0000098114 00000 n 
+0000102959 00000 n 
 trailer
 <<
 /ID 
-[<cda32fcc7430d58ed0416ddd9a4b6af3><cda32fcc7430d58ed0416ddd9a4b6af3>]
+[<43a55b172bd9d30432181231725b0ba1><43a55b172bd9d30432181231725b0ba1>]
 % ReportLab generated PDF document -- digest (opensource)
 
 /Info 29 0 R
@@ -4248,5 +4241,5 @@ trailer
 /Size 54
 >>
 startxref
-111350
+107720
 %%EOF

@@ -20,7 +20,7 @@ styles = getSampleStyleSheet()
 styles.add(ParagraphStyle(name='BodyGuide',fontName='Helvetica',fontSize=10,leading=13,spaceAfter=7))
 styles.add(ParagraphStyle(name='CellGuide',fontName='Helvetica',fontSize=8,leading=10,spaceAfter=0))
 for n in ('Title','Heading1','Heading2','Heading3'):
-    styles[n].textColor=colors.HexColor('#17384A')
+    styles[n].textColor=colors.black
 styles['Title'].fontSize=25
 styles['Title'].leading=29
 styles['Heading1'].fontSize=19
@@ -36,8 +36,8 @@ def para(s, style='BodyGuide'):
 
 def footer(c, doc):
     c.setFont('Helvetica',8)
-    c.setFillColor(colors.HexColor('#52606D'))
-    c.drawString(42,27,'Vikram Talreja | Master project guide | 21 October 2026, revision 3')
+    c.setFillColor(colors.black)
+    c.drawString(42,27,'Vikram Talreja | Master project guide | 27 October 2026, revision 4')
     c.drawRightString(A4[0]-42,27,str(doc.page))
 
 story=[]
@@ -57,7 +57,7 @@ for page,chunk in enumerate((ROOT/'docs/project-learning-guide.md').read_text().
                 data.append([para(cell.strip(),'CellGuide') for cell in row.strip('|').split('|')])
             n=len(data[0]); widths=[(A4[0]-84)/n]*n
             t=Table(data,colWidths=widths,repeatRows=1,hAlign='LEFT')
-            t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#E5EEF2')),('VALIGN',(0,0),(-1,-1),'TOP'),('GRID',(0,0),(-1,-1),.3,colors.HexColor('#CCD6DD')),('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
+            t.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.white),('VALIGN',(0,0),(-1,-1),'TOP'),('GRID',(0,0),(-1,-1),.3,colors.black),('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
             story.extend([t,Spacer(1,9)])
         else:
             m=re.match(r'^(#{1,3}) (.*)',line)

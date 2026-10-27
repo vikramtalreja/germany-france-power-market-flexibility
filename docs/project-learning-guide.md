@@ -1,6 +1,6 @@
 # From power prices to battery decisions
-## A practical learning and presentation guide
-Vikram Talreja | Germany–France power-market and BESS project | 21 October 2026
+## Methods, results and technical reference
+Vikram Talreja | Germany–France power-market and BESS project | 27 October 2026
 
 ### The question behind the project
 Does a more accurate electricity-price forecast actually lead to a better financial decision for a battery?
@@ -13,7 +13,7 @@ The project connects three things: understanding power markets, predicting price
 3. Operational assumptions matter too. Removing a forced nightly 50% charge reset increased simulated margin, mainly through lower purchase and cycling costs.
 
 ### Read this guide in three passes
-First read chapters 1–6 for the market and battery concepts. Next read chapters 7–12 for the experiment and evidence. Finally read chapters 13–18 for intraday accounting, limitations, presentation practice and the glossary, then chapters 19–22 for the current roadmap and the auction-data execution plan.
+First read chapters 1–6 for the market and battery concepts. Next read chapters 7–12 for the experiment and evidence. Finally read chapters 13–18 for intraday accounting, limitations, technical summary and the glossary, then chapters 19–22 for the current roadmap and the auction-data execution plan.
 
 ### Where the project stands
 Historical day-ahead analysis, forecast evaluation, ML diagnosis and continuous operation are completed. An incremental intraday optimisation and accounting engine is implemented and tested. Its current examples are synthetic: no historical intraday profitability result has been established. FCR/aFRR reserve optimisation is not implemented.
@@ -26,18 +26,18 @@ Imagine buying goods when they are cheap and selling them later. A battery can d
 
 An operator therefore needs more than a good price prediction. The operator needs a decision that respects the battery, the information available at that moment, and trades already made. A forecasting error at an unimportant hour may do little damage. An error that causes the battery to fill before the most negative-price hour can be expensive.
 
-### Why this follows from your thesis
-Your thesis coordinated building load, PV and EV charging using forecasts, uncertainty scenarios and receding-horizon optimisation. Its economic question concerned electricity-import costs and flexible charging. This portfolio moves the same decision-focused thinking into separate German and French market-price case studies.
+### Connection to prior research
+Prior thesis research coordinated building load, PV and EV charging using forecasts, uncertainty scenarios and receding-horizon optimisation. Its economic question concerned electricity-import costs and flexible charging. This portfolio moves the same decision-focused thinking into separate German and French market-price case studies.
 
-The connection is methodological: forecast information changes an optimisation decision, and the decision is evaluated economically. The public project does not reproduce your confidential thesis code or data. Its current market controller is deterministic: it uses one forecast trajectory. It does not yet implement the thesis’s two-stage stochastic controller.
+The connection is methodological: forecast information changes an optimisation decision, and the decision is evaluated economically. The public project does not reproduce confidential thesis code or data. Its current market controller is deterministic: it uses one forecast trajectory. It does not yet implement the thesis’s two-stage stochastic controller.
 
 ### The industry relevance
-A forecasting analyst can improve a prediction. An optimisation analyst translates it into dispatch. A trader or portfolio manager asks whether the position is feasible, executable and financially useful. This project lets you explain how those responsibilities connect.
+A forecasting analyst can improve a prediction. An optimisation analyst translates it into dispatch. A trader or portfolio manager asks whether the position is feasible, executable and financially useful. This project connects forecasting, constrained dispatch and economic evaluation.
 
-### A clear statement of your contribution
-“I built a reproducible workflow that turns price forecasts into battery schedules and evaluates the financial consequences. I then examined why models earned different margins and whether operational assumptions were distorting the result.”
+### Project scope
+The workflow turns price forecasts into battery schedules and evaluates their financial consequences. The analysis decomposes margin differences and tests the effect of operating assumptions.
 
-Do not claim a live trading strategy or experience running a real desk. Your demonstrated contribution is modelling, data handling, evaluation and diagnosis.
+The scope covers modelling, data handling, evaluation and diagnosis. It does not establish live trading performance or operational deployment.
 <!-- PAGE -->
 # 2. Electricity markets without assumed background
 ### Why electricity has delivery times
@@ -78,8 +78,8 @@ A high price may reflect tight supply relative to demand, expensive marginal sup
 
 FBMC means flow-based market coupling: cross-border trades are assessed against a representation of network constraints. PTDFs describe how changes in zonal net positions affect monitored network flows; RAM is the capacity margin available to the market under that representation. The project has not implemented FBMC or used PTDF/RAM data to attribute price spikes.
 
-### The right interview language
-“Our observations are consistent with a mechanism” is defensible when you have prices and fundamentals. “We proved the mechanism caused the price” requires much stronger evidence.
+### Interpretation of observational evidence
+Prices and fundamentals can support an interpretation consistent with an economic mechanism. Establishing causality requires stronger identification evidence.
 <!-- PAGE -->
 # 4. Germany and France: what our data actually shows
 ### Whole-year price observations: 2024
@@ -278,10 +278,10 @@ The matched continuous zero-fee oracle earned EUR66,394.25 in Germany and EUR47,
 ### Link back to stochastic optimisation
 A deterministic controller uses one predicted trajectory. A scenario-based controller considers several possible futures. In a two-stage stochastic model, the first decision is common across scenarios because the future is still unknown; later recourse can depend on what happens. Scenario probabilities weight the expected objective.
 
-VSS, the Value of the Stochastic Solution, compares stochastic optimisation with a consistently evaluated expected-value decision. EVPI, the Expected Value of Perfect Information, measures the benefit of knowing uncertainty in advance under matched assumptions. These ideas belong to your thesis methodology. The market project’s oracle gap should not automatically be called VSS or formal EVPI: it is not the same stochastic experiment.
+VSS, the Value of the Stochastic Solution, compares stochastic optimisation with a consistently evaluated expected-value decision. EVPI, the Expected Value of Perfect Information, measures the benefit of knowing uncertainty in advance under matched assumptions. These measures belong to stochastic optimisation methodology. The market project’s oracle gap should not automatically be called VSS or formal EVPI: it is not the same stochastic experiment.
 
-### A question worth asking in an interview
-“Which uncertainties matter most to this asset’s decisions, and how do you evaluate their economic impact?” That connects forecasting, optimisation and model validation without claiming a tool alone solves the business problem.
+### Decision-relevant uncertainty
+The relevant question is which uncertainties change the asset’s decisions and how their economic impact can be evaluated. This connects forecasting, optimisation and model validation.
 <!-- PAGE -->
 # 13. Intraday: adjust a trade, do not erase it
 ### The key bookkeeping rule
@@ -306,7 +306,7 @@ It plans an adjustment using a forecast issued before the decision deadline; act
 
 It assumes all selected adjustments fill together, with perfect physical execution. This is an idealised price-taking auction model. Exchange lot sizes, bid curves, partial fills and continuous order-book behaviour are not implemented. Historical performance is not yet established.
 <!-- PAGE -->
-# 14. A synthetic intraday lesson you can calculate
+# 14. Worked synthetic intraday example
 ### These prices are invented, not historical results
 For transparent arithmetic only, this example uses 100% efficiency, no cycling cost and EUR1/MWh of intraday traded-energy fees. It has four one-hour intervals and the same nominal 1 MW / 2 MWh battery. The historical project uses 90% efficiency and a cycling charge.
 
@@ -351,26 +351,24 @@ There are no executable bids, exchange order book, real liquidity calibration, p
 
 The next defensible claim is a documented historical auction benchmark after the data and execution requirements are satisfied, not “profitable cross-market trading.”
 <!-- PAGE -->
-# 16. Explain the project in five minutes
-### Minute 1: problem and motivation
-“Batteries can shift electricity between cheap and expensive periods, but they have limited power, capacity and efficiency. My question was whether a better price forecast actually produces a better financial decision. This follows from my thesis work on forecasting-aware EV/PV flexibility.”
+# 16. Technical summary
+### Problem and motivation
+Batteries shift electricity between low- and high-price intervals subject to power, capacity and efficiency limits. The research question is whether a more accurate price forecast produces a better financial decision.
 
-### Minute 2: market context and method
-“I compared Germany–Luxembourg and France, studied negative prices and a December spike, then modelled a separate 1 MW / 2 MWh battery in each market. I first established a perfect-foresight benchmark, then used forecasts to choose schedules and actual prices only to value those fixed schedules.”
+### Market context and method
+Germany–Luxembourg and France are separate case studies, with a 1 MW / 2 MWh battery in each market. Perfect foresight provides an upper benchmark. Forecasts determine schedules; actual prices value those fixed schedules.
 
-### Minute 3: strongest forecasting result
-“In the fixed 2025 comparison, Random Forest had lower average error than the seven-day forecast but earned less in both markets. I decomposed the gap into sales, purchases and cycling costs and inspected forecasts, dispatch and state of charge on selected days. Some forecasts flattened valuable spreads or left too little charging headroom.”
+### Forecast evaluation
+In the fixed 2025 comparison, Random Forest had lower average error than the seven-day forecast but earned less in both markets. Sales, purchases and cycling costs explain the margin gap. Selected hourly cases show flattened spreads and insufficient charging headroom, alongside cases where Random Forest performed better.
 
-### Minute 4: operational modelling result
-“I then removed an artificial daily 50% charge reset and preserved commitments across days. Simulated margin increased by about 8% in Germany and 19% in France, mostly through lower purchase and cycling costs. This showed that operational assumptions can be as important as model complexity.”
+### Operating assumptions
+Removing the daily 50% charge reset and preserving commitments across days increased simulated margin by about 8% in Germany and 19% in France, mainly through lower purchase and cycling costs. These findings are specific to the stated model and evaluation periods.
 
-### Minute 5: intraday and honest boundaries
-“I have implemented a tested incremental intraday engine that keeps original day-ahead trades intact and adds new trades. Its current examples are synthetic while historical data and execution assumptions are verified. I would next test one defined auction opportunity with credible information timing, rather than infer executable returns from a final price index.”
+### Intraday extension
+The incremental intraday engine preserves original day-ahead trades and adds new trades. Current examples are synthetic. Historical evaluation requires auction data with credible information timing and a defined execution opportunity.
 
-### Questions you should be ready for
-Why not optimise on actual prices? That is the oracle, not a forecast strategy. Why did ML lose? Explain the observed dispatch mechanisms without claiming ML always loses. Are these profits? They are simulated operating margins with exclusions. Can this trade live? No: execution, risk, data and operational systems are missing.
-
-Use the result appropriate to the experiment. Do not mix whole-year 2024, late-2024 ML and partial-2025 totals.
+### Interpretation limits
+Perfect foresight is an oracle benchmark, not a forecast strategy. The economic metric is simulated operating margin with stated exclusions. Live execution, risk management and operational deployment are outside scope. Whole-year 2024, late-2024 ML and partial-2025 results refer to different experiments and should not be combined.
 <!-- PAGE -->
 # 17. Glossary and practice questions
 | Term | Meaning in this project |
@@ -419,7 +417,7 @@ https://github.com/vikramtalreja/germany-france-power-market-flexibility
 | Intraday status and requirements | docs/intraday-data-and-execution.md |
 | Synthetic ledger examples | reports/intraday_synthetic_demo.md |
 
-Earlier reports retain their historical “next step” wording. The current README and roadmap indicate the latest completed stage. This guide describes the state on 21 October 2026.
+Earlier reports retain their historical “next step” wording. The current README and roadmap indicate the latest completed stage. This guide describes the state on 27 October 2026.
 
 ### Primary external references checked for this extension
 [S1] ENTSO-E, Intraday Auctions on SIDC: https://www.entsoe.eu/network_codes/cacm/implementation/ida/
@@ -431,7 +429,7 @@ Earlier reports retain their historical “next step” wording. The current REA
 ### A practical learning routine
 Take one finding and explain it in three layers: a plain-language statement, the numerical evidence, then the assumptions that could change it. Recalculate the battery cycle and trade-cancellation examples by hand. Open one selected ML case and identify the forecast, action, SOC constraint and cashflow consequence. Finally, ask what information was actually available when that decision was made.
 
-Your strongest story is not “I used many tools.” It is “I traced a prediction through a constrained decision into a financial outcome, checked the accounting, and investigated why the result occurred.”
+The analysis traces a prediction through a constrained decision into a financial outcome, checks the accounting and investigates the resulting dispatch.
 
 <!-- PAGE -->
 # 19. Agreed roadmap and the data we have checked

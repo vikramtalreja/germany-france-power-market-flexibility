@@ -99,7 +99,7 @@ Done when: commitments remain feasible under the declared activation assumptions
 - The inspected 2024 and January–September 2025 periods can support retrospective comparisons and diagnosis; they cannot be relabelled unseen tests.
 - Freeze new choices before viewing new evaluation outcomes. Any claim of independent validation requires a verified, previously uninspected period.
 - Keep historical configurations and results reproducible. Publish new experiments separately.
-- Each stage includes the question, timing diagram or example where useful, assumptions, implementation, validation, findings, limitations and interview explanation.
+- Each stage includes the question, timing diagram or example where useful, assumptions, implementation, validation, findings, limitations and technical interpretation.
 - Describe only implemented market participation on the CV. Current implemented scope remains day-ahead arbitrage.
 
 ## Supporting work and deferred items
@@ -118,3 +118,7 @@ An educational PTDF/RAM network example and additional causal market investigati
 Day-ahead benchmark, forecast/ML diagnosis and continuous operation are complete. Intraday synthetic engine is tested; suitable historical data and historical execution validation remain prerequisites. Energy plus reserves follows that stage. See [master guide](project-learning-guide.md), chapters 19–21. The uncertainty-aware forecast experiment remains optional.
 
 Preparation v1 is implemented: canonical IDA1 schema validation, DST handling, DA alignment and paired metrics. The evaluation protocol is frozen in docs/intraday-evaluation-plan.md and config/intraday_evaluation_v1.json. Full historical forecasting/backtest and supplier-specific validation remain pending. The printable guide is revision 3.
+
+## Documentation revision — 27 October 2026
+
+Technical summaries and the printable guide have been refreshed for external review. Historical intraday evaluation remains pending the required auction data; this documentation revision does not advance the modelling stage.

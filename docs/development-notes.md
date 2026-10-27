@@ -149,7 +149,7 @@ Why: daily 50% SOC restoration was a modelling restriction that could distort fi
 
 The GitHub workflow succeeded with 20 tests and full-run physical, information-timing, baseline-reconciliation and accounting checks. Retained 101,744 hourly policy rows, 4,240 daily rows, decision audits, compressed full dispatch/ledger, summary tables and a chart. All strategies remained below matched full-period perfect-foresight bounds. Existing experiments were preserved.
 
-Main zero-fee gains against daily reset: EUR4,448.94 (+8.04%) DE-LU and EUR6,435.47 (+19.13%) France. Purchase savings and reduced cycling explain most of the gain. France ended empty on all 264 internal boundaries; Germany on 257. This mostly shows the benefit of removing forced daily recharging, not substantial overnight energy storage. The provisional 0%/100% terminal sensitivities yielded identical committed trajectories to 50%; do not generalise that invariance. Fee-matched gains remained positive. See [findings](continuous-operation-findings.md) for exact component attribution and interview wording, and [generated results](../reports/continuous_results_2025.md).
+Main zero-fee gains against daily reset: EUR4,448.94 (+8.04%) DE-LU and EUR6,435.47 (+19.13%) France. Purchase savings and reduced cycling explain most of the gain. France ended empty on all 264 internal boundaries; Germany on 257. This mostly shows the benefit of removing forced daily recharging, not substantial overnight energy storage. The provisional 0%/100% terminal sensitivities yielded identical committed trajectories to 50%; do not generalise that invariance. Fee-matched gains remained positive. See [findings](continuous-operation-findings.md) for exact component attribution and technical summary, and [generated results](../reports/continuous_results_2025.md).
 
 Limitations: already inspected 2025 data, repeated two-day forecast profile, perfect acceptance/execution, no imbalance, bid/ask, intraday or reserve participation. Daily P&L reflects inventory timing; equal final SOC makes full-period comparisons more informative. Next: verify intraday data and freeze an execution specification before extending the ledger with incremental trades.
 
@@ -162,7 +162,7 @@ Implemented one pre-delivery ID adjustment with unchanged original DA quantities
 
 Published entirely synthetic four-hour examples: original DA cashflow EUR150; identical adjustments yield incremental EUR292 when the forecast materialises and EUR-308 when it is wrong, after EUR8 ID fees. Demo efficiency is deliberately 100% with zero wear for hand arithmetic, unlike the historical model. These are accounting examples, not historical profits.
 
-Created a complete beginner-to-interview project guide, including market basics, negative-price interpretation, physical equations, forecast evaluation, chronological validation, RF diagnosis, continuous SOC, intraday accounting, evidence limitations, glossary and presentation practice. Markdown source is retained in docs/project-learning-guide.md; printable versions are delivered separately.
+Created a complete project methodology guide, including market basics, negative-price interpretation, physical equations, forecast evaluation, chronological validation, RF diagnosis, continuous SOC, intraday accounting, evidence limitations, glossary and technical summary. Markdown source is retained in docs/project-learning-guide.md; printable versions are delivered separately.
 
 ## 21 October 2026 — printable master and intraday readiness
 
@@ -171,3 +171,7 @@ Added guide chapters 19–21: agreed stage sequence, sample rejection reasons, b
 ## 21 October 2026 — intraday preparation v1
 
 Verified dated EPEX IDA1 reference specifications. Implemented canonical data validation, DST grids, information cutoff checks, immutable DA quarter-hour allocation and paired financial metrics. Added 11 meaningful tests (39 total passing). Frozen versioned evaluation parameters and failure policy before receiving historical IDA1 data. Updated master guide to revision 3 with implementation/evidence boundaries. Historical dataset, supplier parser, publication evidence and executable fill model remain outstanding.
+
+## 27 October 2026 — Documentation presentation
+
+Replaced personal coaching passages with technical summaries, moved maintenance guidance to CONTRIBUTING.md, and refreshed the stable printable guide with black typography. Model code, evidence, sources and numerical results are unchanged.

@@ -1,4 +1,4 @@
-# Continuous operation: findings and interview explanation
+# Continuous operation: findings and technical interpretation
 
 ## What we did and why
 
@@ -46,7 +46,7 @@ All 20 tests passed in [the successful workflow](https://github.com/vikramtalrej
 
 The 2025 period was already inspected. This is a frozen retrospective structural experiment, not independent validation. Price-taking, full acceptance and perfect physical execution remain assumptions. There are no actual bids, bid/ask spreads, outages, imbalance costs, intraday trades or reserve commitments. Historical hourly resolution is retained for this period. The terminal sensitivity did not change committed actions here; results should not be generalised to other forecasts, durations or horizons.
 
-## How to explain it in an interview
+## Interpretation of the result
 
 “I first compared forecasts by the financial outcomes of their battery schedules. Then I tested whether an artificial daily 50% charge reset was influencing those outcomes. I implemented continuous state of charge, projected the opening state through existing commitments, and separated committed trades from settlement. Margin improved mainly through lower purchase and cycling costs. That taught me to inspect operational constraints and accounting as carefully as forecast accuracy.”
 

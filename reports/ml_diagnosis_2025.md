@@ -59,7 +59,7 @@ The five largest underperformance and three largest outperformance days per mark
 - [Recovery audit](dispatch_recovery_2025.json)
 - [Full compressed dispatch and source price CSV files](../data/recovered/README.md)
 
-## Interview explanation and next step
+## Technical interpretation and next step
 
 “I found that the financial gap depended on dispatch decisions. On some French days the forest predicted too little spread to justify cycling, so the battery stayed idle despite profitable actual opportunities. On a German negative-price day it filled too early and had little space left at the lowest price. I reconciled the differences through sales, purchases and cycling costs and retained examples where the forest outperformed.”
 

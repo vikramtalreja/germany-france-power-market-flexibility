@@ -120,7 +120,7 @@ The [test protocol](docs/independent-2025-protocol.md) and runner were frozen be
 
 ## ML diagnosis — completed
 
-See the [diagnosis and interview explanation](reports/ml_diagnosis_2025.md) and [all 16 hourly cases and charts](reports/ml_diagnosis_hourly_2025.md). The analysis reconciles sales revenue, purchase expenditure and cycling cost and shows both missed opportunities and RF wins. Recovery passed all published daily-result checks; the full reconstructed hourly CSV is saved under data/recovered.
+See the [diagnosis and technical interpretation](reports/ml_diagnosis_2025.md) and [all 16 hourly cases and charts](reports/ml_diagnosis_hourly_2025.md). The analysis reconciles sales revenue, purchase expenditure and cycling cost and shows both missed opportunities and RF wins. Recovery passed all published daily-result checks; the full reconstructed hourly CSV is saved under data/recovered.
 
 ## Recover hourly data without a local installation
 
@@ -130,7 +130,7 @@ The **Recover dispatch and diagnose ML** GitHub Actions workflow reconstructs th
 
 The battery now carries physical SOC between days and projects tomorrow's opening state through existing commitments. It plans two delivery days but commits only the first. Under the unchanged seven-day forecast, simulated zero-fee margin increased from EUR55,361.95 to EUR59,810.90 in DE-LU and from EUR33,633.12 to EUR40,068.58 in France over 9 January–30 September 2025. Initial and final energy are matched. This is retrospective evidence, not a new unseen test or demonstrated trading income.
 
-Lower purchase expenditure and cycling explain most of the improvement; the battery usually ends empty rather than storing energy overnight. Read the [results](reports/continuous_results_2025.md), [interpretation and interview explanation](docs/continuous-operation-findings.md), [frozen protocol](docs/continuous-operation-protocol.md) and [audit](reports/continuous_audit_2025.json). All 20 tests and full-run accounting/physical checks passed. Full dispatch and the separate trade ledger are retained in [data/continuous](data/continuous/README.md).
+Lower purchase expenditure and cycling explain most of the improvement; the battery usually ends empty rather than storing energy overnight. Read the [results](reports/continuous_results_2025.md), [interpretation and technical interpretation](docs/continuous-operation-findings.md), [frozen protocol](docs/continuous-operation-protocol.md) and [audit](reports/continuous_audit_2025.json). All 20 tests and full-run accounting/physical checks passed. Full dispatch and the separate trade ledger are retained in [data/continuous](data/continuous/README.md).
 
 Reproduce with `python scripts/analyse_continuous.py` using the recovered inputs and versions recorded in the audit, or run the **Continuous battery operation** GitHub Actions workflow. Historical results remain day-ahead only. The new intraday engine has synthetic validation; historical intraday evaluation and reserve strategies remain future work.
 
